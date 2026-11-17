@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.gymtracker.nativeplugin" >
+
+    <uses-sdk android:minSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.health.READ_STEPS" />
+    <uses-permission android:name="android.permission.health.READ_WEIGHT" />
+    <uses-permission android:name="android.permission.health.READ_SLEEP" />
+    <uses-permission android:name="android.permission.health.READ_RESTING_HEART_RATE" />
+    <uses-permission android:name="android.permission.health.WRITE_EXERCISE" />
+
+    <queries>
+        <package android:name="com.google.android.apps.healthdata" />
+    </queries>
+
+    <application>
+
+        <!-- Health Connect zeigt diese Seite, wenn man wissen will, wofür die App die Daten nutzt. -->
+        <activity
+            android:name="de.gymtracker.nativeplugin.HealthRationaleActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" >
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>
+        </activity> <!-- Android 14 und neuer -->
+        <activity-alias
+            android:name="de.gymtracker.nativeplugin.ViewPermissionUsageActivity"
+            android:exported="true"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE"
+            android:targetActivity="de.gymtracker.nativeplugin.HealthRationaleActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS" />
+            </intent-filter>
+        </activity-alias>
+    </application>
+
+</manifest>
