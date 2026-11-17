@@ -1,2 +1,0 @@
-de.gymtracker.nativeplugin
-drawable gn_ic_timer
