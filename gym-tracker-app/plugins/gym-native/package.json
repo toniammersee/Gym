@@ -1,0 +1,12 @@
+{
+  "name": "gym-native",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Eigene Android-Funktionen für Gym Tracker: Pausen-Timer im Sperrbildschirm und Health Connect",
+  "main": "index.js",
+  "capacitor": {
+    "android": {
+      "src": "android"
+    }
+  }
+}

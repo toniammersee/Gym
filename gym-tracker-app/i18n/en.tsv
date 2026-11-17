@@ -1,0 +1,1390 @@
+# Deutsch<TAB>English. # steht für eine Zahl. Nach Änderungen: node scripts/build-lang.js
+So	Sun
+Mo	Mon
+Di	Tue
+Mi	Wed
+Do	Thu
+Fr	Fri
+Sa	Sat
+Mär	Mar
+Mai	May
+Okt	Oct
+Dez	Dec
+Brust	Chest
+Rücken	Back
+Schultern	Shoulders
+Bizeps	Biceps
+Trizeps	Triceps
+Unterarme	Forearms
+Quadrizeps	Quads
+Beinbeuger	Hamstrings
+Gesäß	Glutes
+Waden	Calves
+Bauch	Abs
+Bankdrücken	Bench press
+Schrägbankdrücken Kurzhantel	Incline dumbbell press
+Fliegende Kabelzug	Cable fly
+Kreuzheben	Deadlift
+Klimmzüge	Pull-ups
+Langhantelrudern	Barbell row
+Latziehen	Lat pulldown
+Rudern am Kabel	Seated cable row
+Schulterdrücken	Overhead press
+Seitheben	Lateral raise
+Face Pulls	Face pulls
+Langhantelcurls	Barbell curl
+Hammercurls	Hammer curl
+Trizepsdrücken Kabel	Cable triceps pushdown
+French Press	French press
+Kniebeugen	Squat
+Beinpresse	Leg press
+Ausfallschritte	Lunges
+Beinstrecker	Leg extension
+Rumänisches Kreuzheben	Romanian deadlift
+Beinbeuger liegend	Lying leg curl
+Hip Thrust	Hip thrust
+Wadenheben stehend	Standing calf raise
+Hängendes Beinheben	Hanging leg raise
+Bankdrücken Kurzhantel	Dumbbell bench press
+Schrägbankdrücken Langhantel	Incline barbell press
+Brustpresse Maschine	Chest press machine
+Butterfly Maschine	Pec deck machine
+Fliegende Kurzhantel	Dumbbell fly
+Liegestütze	Push-ups
+Cable Crossover	Cable crossover
+Negativbankdrücken	Decline bench press
+Rudern Kurzhantel einarmig	One-arm dumbbell row
+T-Bar-Rudern	T-bar row
+Rudern Maschine	Machine row
+Latziehen enger Griff	Close-grip lat pulldown
+Klimmzüge Untergriff	Chin-ups
+Kabel-Pullover	Cable pullover
+Sumo-Kreuzheben	Sumo deadlift
+Rack Pulls	Rack pulls
+Schulterdrücken Kurzhantel	Dumbbell shoulder press
+Arnold Press	Arnold press
+Frontheben	Front raise
+Seitheben Kabel	Cable lateral raise
+Seitheben Maschine	Machine lateral raise
+Reverse Butterfly	Reverse pec deck
+Aufrechtes Rudern	Upright row
+Military Press	Military press
+Kurzhantelcurls	Dumbbell curl
+Scott Curls	Preacher curl
+Konzentrationscurls	Concentration curl
+Kabelcurls	Cable curl
+Schrägbankcurls	Incline dumbbell curl
+Trizepsdrücken Seil	Rope triceps pushdown
+Überkopf-Trizepsstrecken	Overhead triceps extension
+Enges Bankdrücken	Close-grip bench press
+Skullcrusher Kurzhantel	Dumbbell skullcrusher
+Dips an der Bank	Bench dips
+Handgelenkcurls	Wrist curl
+Farmer's Walk	Farmer's walk
+Reverse Curls	Reverse curl
+Frontkniebeugen	Front squat
+Hackenschmidt	Hack squat
+Bulgarian Split Squats	Bulgarian split squat
+Goblet Squats	Goblet squat
+Beinpresse einbeinig	Single-leg leg press
+Kniebeugen Multipresse	Smith machine squat
+Beinbeuger sitzend	Seated leg curl
+Good Mornings	Good mornings
+Nordic Curls	Nordic curls
+Rumänisches Kreuzheben Kurzhantel	Dumbbell Romanian deadlift
+Glute Bridge	Glute bridge
+Kabel-Kickbacks Gesäß	Cable glute kickback
+Abduktoren Maschine	Hip abduction machine
+Hip Thrust Maschine	Hip thrust machine
+Ausfallschritte rückwärts	Reverse lunges
+Wadenheben sitzend	Seated calf raise
+Wadenpresse	Calf press
+Cable Crunch	Cable crunch
+Russian Twists	Russian twists
+Ab Wheel	Ab wheel
+Beinheben liegend	Lying leg raise
+Seitlicher Unterarmstütz	Side plank
+Bankdrücken Smithmaschine	Smith machine bench press
+Schrägbankdrücken Smithmaschine	Smith machine incline press
+Kniebeugen Smithmaschine	Smith machine squat
+Schulterdrücken Smithmaschine	Smith machine shoulder press
+Rudern Smithmaschine	Smith machine row
+Ausfallschritte Smithmaschine	Smith machine lunges
+Hip Thrust Smithmaschine	Smith machine hip thrust
+Wadenheben Smithmaschine	Smith machine calf raise
+Seitheben einarmig Kabel	One-arm cable lateral raise
+Kabelrudern einarmig	One-arm cable row
+Latziehen einarmig	One-arm lat pulldown
+Trizepsdrücken einarmig	One-arm triceps pushdown
+Schulterdrücken Kurzhantel einarmig	One-arm dumbbell shoulder press
+Einbeiniges Kreuzheben Kurzhantel	Single-leg dumbbell deadlift
+Beinbeuger einbeinig	Single-leg leg curl
+Beinstrecker einbeinig	Single-leg leg extension
+Frühstück	Breakfast
+Mittagessen	Lunch
+Abendessen	Dinner
+Langhantel	Barbell
+Kurzhantel	Dumbbell
+Maschine	Machine
+Smithmaschine	Smith machine
+Kabel	Cable
+Körpergewicht	Bodyweight
+Sonstiges	Other
+Lavendel	Lavender
+Blau	Blue
+Grün	Green
+Rosé	Rose
+Rot	Red
+Eis	Ice
+Januar	January
+Februar	February
+März	March
+Juni	June
+Juli	July
+Oktober	October
+Dezember	December
+Sonntag	Sunday
+Montag	Monday
+Dienstag	Tuesday
+Mittwoch	Wednesday
+Donnerstag	Thursday
+Freitag	Friday
+Samstag	Saturday
+Taille	Waist
+Hüfte	Hips
+Oberarm	Upper arm
+Oberschenkel	Thigh
+Wade	Calf
+Klingel	Bell
+Piepton	Beep
+Aus	Off
+Neuling	Newbie
+Einsteiger	Beginner
+Regelmäßig	Regular
+Fortgeschritten	Advanced
+Stark	Strong
+Legende	Legend
+Haferflocken	Oats
+Magerquark	Low-fat quark
+Hüttenkäse	Cottage cheese
+Hähnchenbrust	Chicken breast
+Ei	Egg
+Thunfisch (Dose, im Saft)	Tuna (canned in water)
+Lachs	Salmon
+Reis, gekocht	Rice, cooked
+Nudeln, gekocht	Pasta, cooked
+Kartoffeln	Potatoes
+Vollkornbrot	Wholegrain bread
+Banane	Banana
+Apfel	Apple
+Brokkoli	Broccoli
+Mandeln	Almonds
+Erdnussbutter	Peanut butter
+Olivenöl	Olive oil
+Whey Protein	Whey protein
+Beine	Legs
+Kreatin	Creatine
+1000 IE	1000 IU
+1 Kapsel	1 capsule
+Haferflocken mit Skyr & Beeren	Oats with skyr & berries
+Hähnchen, Reis, Brokkoli	Chicken, rice, broccoli
+Proteinshake + Banane	Protein shake + banana
+Lachs, Kartoffeln, Salat	Salmon, potatoes, salad
+Gespeichert	Saved
+Nur lokal	Local only
+Speichert…	Saving…
+Speichern fehlgeschlagen	Saving failed
+Unbekannte Übung	Unknown exercise
+Für einen Verlauf braucht es mindestens zwei Einträge.	A trend needs at least two entries.
+Verlauf	History
+Balkendiagramm	Bar chart
+Training	Workout
+Fortschritt	Progress
+Erholung	Recovery
+Essen	Food
+Vorlagen	Templates
++ Neue Vorlage	+ New template
+Übungen ·	exercises ·
+noch nie	never
+Bearbeiten	Edit
+Leeres Training starten	Start empty workout
+Diese Woche	This week
+Trainings	Workouts
+Sätze	Sets
+Volumen	Volume
+Zuletzt	Recent
+Alle ansehen	See all
+Werkzeuge	Tools
+Übungen	Exercises
+Rechner	Calculators
+Wochenplan	Weekly plan
+Auswertung und Muskeln	Analysis and muscles
+Löschen	Delete
+Dauer	Duration
+Name des Trainings	Workout name
+Tippe auf die Satznummer: W Aufwärmen (zählt nicht), D Dropsatz, F Fehlversuch.	Tap the set number: W warm-up (doesn't count), D drop set, F failed attempt.
+· einseitig	· one side
+· Zusatzgewicht	· added weight
+Letztes Mal	Last time
+Noch keine Daten	No data yet
+Nach oben	Move up
+Nach unten	Move down
+Übung entfernen	Remove exercise
+Letztes	Last
+Wdh	Reps
++ Satz	+ Set
+− Satz	− Set
+Austauschen	Swap
+Einseitig	One side
+Pause nach dem Satz	Rest after the set
+Superset lösen	Unlink superset
+Superset mit nächster	Superset with next
+Notiz zur Übung	Note on exercise
+Notiz zum Training (optional)	Note on workout (optional)
+Notiz zum Training	Note on workout
+Training verwerfen	Discard workout
++ Übung	+ Exercise
+Training beenden	Finish workout
+Ansicht	View
+Vergleichen	Compare
+Kalender	Calendar
+Noch keine Trainings gespeichert. Starte ein Training im Tab „Training“, dann erscheint es hier.	No workouts saved yet. Start a workout in the “Workout” tab and it will show up here.
+Zum Vergleichen braucht es mindestens zwei Trainings.	Comparing needs at least two workouts.
+Training A	Workout A
+Training B	Workout B
+Ø Gewicht pro Wdh.	Ø weight per rep
+Gesamt	Total
+Änderung	Change
+Übung	Exercise
+Sätze ·	sets ·
+Δ 1RM vergleicht den geschätzten Maximalwert des besten Satzes (Epley), A gegenüber B.	Δ 1RM compares the estimated max of the best set (Epley), A versus B.
+Bereich	Section
+Kraft	Strength
+Körper	Body
+Punkte	Points
+Punkte bis Level	points to level
+Punkte diese Woche	points this week
+Wochen Serie	week streak
++ Gewicht	+ Weight
+Trag dein Gewicht hier oder im Tab „Erholung“ ein, dann siehst du Verlauf, Trend und Ziel.	Log your weight here or in the “Recovery” tab to see history, trend and goal.
+kg zuletzt,	kg latest,
+kg Schnitt 7 Tage	kg 7-day average
+kg in 30 Tagen	kg in 30 days
+Einträge	entries
+Für eine Prognose brauche ich mindestens drei Einträge über eine Woche.	A forecast needs at least three entries over one week.
+Der aktuelle Trend geht noch nicht in Richtung Ziel.	The current trend is not heading towards your goal yet.
+Beim aktuellen Tempo dauert es mehr als zwei Jahre.	At the current pace it will take more than two years.
+Prognose: etwa	Forecast: around
+kg pro Woche.	kg per week.
+Zielgewicht	Goal weight
+Sobald du Trainings gespeichert hast, siehst du hier Kraftentwicklung, Rekorde und Volumen.	Once you have saved workouts, you'll see strength progress, records and volume here.
+Wochenbericht	Weekly report
+Monatsbericht	Monthly report
+Jahresrückblick	Year in review
+Übungsbibliothek	Exercise library
+Geschätztes 1RM	Estimated 1RM
+Top-Gewicht	Top weight
+Kennzahl	Metric
+pro Training	per workout
+Bestes 1RM (kg)	Best 1RM (kg)
+Top-Gewicht (kg)	Top weight (kg)
+seit Beginn	since start
+Wochenvolumen	Weekly volume
+Tonnen, Wochenstart Montag	tonnes, week starts Monday
+Volumen pro Woche	Volume per week
+Trainings pro Woche (letzte 7 Wochen)	Workouts per week (last 7 weeks)
+Rekorde	Records
+Alle Bestwerte	All bests
+Sätze pro Muskelgruppe	Sets per muscle group
+30 Tage	30 days
+Hauptmuskeln zählen voll, Nebenmuskeln zur Hälfte.	Main muscles count fully, secondary muscles count half.
+Keine Trainings in den letzten 30 Tagen.	No workouts in the last 30 days.
+Vorne	Front
+Hinten	Back
+Satz	Set
+· nebenbei	· secondary
+Ich	Me
+Freund	Friend
+Code teilen	Share code
+Heute laut Wochenplan	Today per weekly plan
+Heute schon trainiert. Als Nächstes:	Already trained today. Up next:
+Am längsten nicht dran	Longest since last session
+Wochen Serie ·	week streak ·
+diese Woche	this week
+Erholung der Muskeln	Muscle recovery
+Noch keine Vorlage	No template yet
+bis Level	to level
+Du	You
+· Stand	· as of
+Rangliste	Leaderboard
+Freunde und Code	Friends and code
+Zeitraum	Period
+Tausche mit Freunden einen Code aus, dann erscheinen sie hier. Der Vergleich läuft ohne Konto direkt zwischen euren Handys.	Swap codes with friends and they'll show up here. The comparison runs directly between your phones, no account needed.
+Punkte: Training 50 + 4 je Satz + Volumen, Rekord 25, Abzeichen 15, Wochenserie 20, Essen eintragen 3 am Tag.	Points: workout 50 + 4 per set + volume, record 25, badge 15, week streak 20, logging food 3 per day.
+neue Bestwerte	new bests
+neuer Bestwert	new best
+% über dem letzten „	% above the last “
+“. Das ist genau die Richtung, die Muskeln wachsen lässt.	”. That's exactly the direction that builds muscle.
+% unter dem letzten „	% below the last “
+“. Bei Müdigkeit ist das okay. Sonst peile nächstes Mal wieder die alten Sätze an.	”. That's okay when you're tired. Otherwise aim for the old sets again next time.
+Volumen etwa wie beim letzten „	Volume about the same as the last “
+“. Für Fortschritt steigere nächstes Mal bei einer Übung das Gewicht oder eine Wiederholung.	”. To progress, add weight or a rep on one exercise next time.
+: alle Sätze mit	: all sets done with
+oder mehr Wdh. geschafft. Nächstes Mal	or more reps. Next time try
+kg probieren.	kg.
+: die Wiederholungen fallen von	: reps drop from
+ab. Verlängere die Pause um 30 bis 60 Sekunden oder senke das Gewicht leicht.	. Rest 30 to 60 seconds longer or lower the weight slightly.
+schwächer (	weaker (
+Wdh.). Beginne nächstes Mal mit der schwächeren Seite und gleiche die Wiederholungen der stärkeren an.	reps). Start with the weaker side next time and match the reps on the stronger side.
+in 7 Tagen ist viel. Plane eine leichtere Woche, wenn die Leistung stockt.	in 7 days is a lot. Plan a lighter week if performance stalls.
+: erst	: only
+in 7 Tagen. Für Muskelaufbau gelten 10 bis 20 pro Woche. Du kannst noch	in 7 days. For muscle growth 10 to 20 per week is the guideline. You can still add
+Mehr Druck als Zug diese Woche (	More push than pull this week (
+Sätze). Rudern und Face Pulls schützen die Schultern.	sets). Rows and face pulls protect your shoulders.
+Mehr Zug als Druck diese Woche (	More pull than push this week (
+Sätze). Ein Drück-Training gleicht das aus.	sets). A push workout balances that out.
+Beine seit 14 Tagen kaum trainiert. Kniebeugen oder Beinpresse beim nächsten Mal.	Legs barely trained in 14 days. Squats or leg press next time.
+Das Training dauerte	The workout lasted
+Minuten. Ab etwa 90 Minuten lässt die Qualität nach. Weniger Übungen oder kürzere Pausen helfen.	minutes. After about 90 minutes quality drops. Fewer exercises or shorter rests help.
+Protein heute:	Protein today:
+g. Eine proteinreiche Mahlzeit in den nächsten Stunden schließt die Lücke.	g. A protein-rich meal in the next few hours closes the gap.
+g. Gute Basis für die Erholung.	g. A good base for recovery.
+Du hast heute nur	You only slept
+Stunden geschlafen. Heute Abend früher ins Bett, dann erholen sich die Muskeln besser.	hours today. Go to bed earlier tonight and your muscles will recover better.
+Regeneration:	Recovery:
+in ca.	in about
+Std.	h
+Uhr.	o'clock.
+Als Nächstes:	Up next:
+laut Wochenplan.	per weekly plan.
+Training gespeichert	Workout saved
+Schließen	Close
+Minuten	Minutes
+kg Volumen	kg volume
+Rekord	Record
+Training abgeschlossen	Workout complete
+Neues Level erreicht	New level reached
+Neue Bestwerte	New bests
+Trainierte Muskeln	Muscles trained
+trainierte Muskeln	muscles trained
+Kräftige Farbe: Hauptmuskel. Blasse Farbe: arbeitet nebenbei mit.	Strong colour: main muscle. Pale colour: works along.
+Noch zu wenig Verlauf für eine Auswertung. Nach ein paar Trainings werden die Hinweise genauer.	Not enough history for an analysis yet. After a few workouts the tips get more precise.
+Als Vorlage speichern	Save as template
+Fertig	Done
+Pausenzeit	Rest time
+Pause vorbei	Rest over
+Weiter mit dem nächsten Satz.	On to the next set.
+Bereit für eine harte Einheit	Ready for a hard session
+Normal trainieren, Gewichte wie geplant	Train normally, weights as planned
+Heute locker oder Pause	Take it easy or rest today
+Bereitschaft heute, 0 bis 100. Aus Schlaf, Muskelkater und Energie.	Readiness today, 0 to 100. Based on sleep, soreness and energy.
+Schlaf (Stunden)	Sleep (hours)
+Ruhepuls (optional)	Resting heart rate (optional)
+Schläge/min	beats/min
+Schlafqualität	Sleep quality
+Mies	Poor
+Top	Great
+Muskelkater	Soreness
+Keiner	None
+Mittel	Medium
+Energie	Energy
+Leer	Empty
+Voll	Full
+Körpergewicht in kg (optional)	Body weight in kg (optional)
+Check-in aktualisieren	Update check-in
+Check-in speichern	Save check-in
+Körperkarte	Body map
+7 Tage	7 days
+Erholungsstand	Recovery status
+letztes Training	last workout
+Belastung der letzten 7 Tage	Load over the last 7 days
+fast bereit	almost ready
+erholt sich noch	still recovering
+kein Training	no workout
+Noch kein Training.	No workout yet.
+Je kräftiger die Farbe, desto mehr Sätze in den letzten 7 Tagen. Nebenmuskeln zählen zur Hälfte.	The stronger the colour, the more sets in the last 7 days. Secondary muscles count half.
+Muskelgruppen	Muscle groups
+Richtwert 24 bis 96 Std.	Guideline 24 to 96 h
+Noch in Erholung:	Still recovering:
+Std. her)	h ago)
+Bereit:	Ready:
+Noch keine Gruppe vollständig erholt.	No group fully recovered yet.
+Letzte	Last
+Tage	days
+Bereitschaft	Readiness
+Schlaf pro Nacht	Sleep per night
+Gestrichelt: 8 Stunden.	Dashed: 8 hours.
+kcal drüber	kcal over
+kcal übrig	kcal left
+Voriger Tag	Previous day
+Heute	Today
+Nächster Tag	Next day
+Kohlenhydrate	Carbs
+Fett	Fat
++ Eintrag	+ Entry
+Ziele	Goals
+Lebensmittel	Foods
+Mahlzeiten-Vorlagen	Meal templates
+Was passt noch?	What still fits?
+Meine Vorlagen	My templates
+Schnell hinzufügen	Quick add
+Für diesen Tag ist noch nichts eingetragen.	Nothing logged for this day yet.
+Eintrag löschen	Delete entry
+Letzte 7 Tage	Last 7 days
+kcal, gestrichelt: Ziel	kcal, dashed: goal
+Kalorien pro Tag	Calories per day
+Letztes Mal hast du alle Sätze mit	Last time you did all sets with
+kg und	kg and
+Wdh. geschafft. Probiere	reps. Try
+Bleib bei	Stay at
+kg und steigere die Wiederholungen auf	kg and increase the reps to
+Übernehmen	Apply
+Heute:	Today:
+Laut Wochenplan	Per weekly plan
+, Training	, workout
+Voriger Monat	Previous month
+Nächster Monat	Next month
+Gestrichelt: laut Wochenplan geplant.	Dashed: planned per weekly plan.
+Kein Training an diesem Tag.	No workout on this day.
++ Ziel	+ Goal
+Setze dir ein Ziel, zum Beispiel Bankdrücken 100 kg (geschätztes 1RM).	Set yourself a goal, for example bench press 100 kg (estimated 1RM).
+Erreicht	Reached
+Ziel löschen	Delete goal
+Jetzt	Now
+kg geschätztes 1RM	kg estimated 1RM
+Erstes Training	First workout
+Das erste Training speichern	Save your first workout
+10 Trainings	10 workouts
+10 Trainings gespeichert	10 workouts saved
+25 Trainings	25 workouts
+25 Trainings gespeichert	25 workouts saved
+50 Trainings	50 workouts
+50 Trainings gespeichert	50 workouts saved
+100 Trainings	100 workouts
+100 Trainings gespeichert	100 workouts saved
+4 Wochen Serie	4-week streak
+4 Wochen in Folge das Wochenziel	Weekly goal 4 weeks in a row
+8 Wochen Serie	8-week streak
+8 Wochen in Folge das Wochenziel	Weekly goal 8 weeks in a row
+12 Wochen Serie	12-week streak
+12 Wochen in Folge das Wochenziel	Weekly goal 12 weeks in a row
+100 Tonnen	100 tonnes
+100 Tonnen insgesamt bewegt	100 tonnes moved in total
+500 Tonnen	500 tonnes
+500 Tonnen insgesamt bewegt	500 tonnes moved in total
+5 Rekorde	5 records
+5 neue Bestwerte erreicht	5 new bests reached
+25 Rekorde	25 records
+25 neue Bestwerte erreicht	25 new bests reached
+Ziel erreicht	Goal reached
+Ein eigenes Ziel schaffen	Reach one of your own goals
+Serie und Abzeichen	Streak and badges
+Wochen in Folge	weeks in a row
+Längste Serie	Longest streak
+Wochenziel:	Weekly goal:
+Trainings pro Woche	workouts per week
+Wochenziel senken	Lower weekly goal
+Wochenziel erhöhen	Raise weekly goal
+Fortschrittsfotos	Progress photos
++ Foto	+ Photo
+Fotos sind in dieser Ansicht nicht verfügbar.	Photos aren't available in this view.
+Noch keine Fotos. Mache regelmäßig ein Foto aus demselben Winkel, dann siehst du die Veränderung.	No photos yet. Take a photo regularly from the same angle and you'll see the change.
+Nebeneinander ansehen	View side by side
+Ansehen	View
+Tippe bis zu zwei Fotos an, um sie zu vergleichen. Fotos bleiben nur auf diesem Gerät und sind nicht im Backup.	Tap up to two photos to compare them. Photos stay on this device only and aren't in the backup.
+Körpermaße	Body measurements
++ Messung	+ Measurement
+Noch keine Messung. Miss zum Beispiel Brust, Taille und Oberarm und verfolge die Veränderung in cm.	No measurement yet. Measure e.g. chest, waist and upper arm and track the change in cm.
+Körpermaß in cm	Body measurement in cm
+Stand	As of
+Wasser	Water
+Verwalten	Manage
+Noch keine Supplements angelegt.	No supplements added yet.
+Favorit	Favourite
+Sonstige	Other
+Anleitung	How-to
+Keine Treffer.	No matches.
+pro 100 g	per 100 g
+Das Zielgewicht muss über dem Stangengewicht (	The target weight must be above the bar weight (
+kg) liegen.	kg).
+Pro Seite auflegen	Load per side
+Nicht genau erreichbar. Geladen sind	Not exactly possible. Loaded:
+kg (kleinste Scheibe 1,25 kg).	kg (smallest plate 1.25 kg).
+kg mit	kg with
+kg Stange.	kg bar.
+Trag Gewicht und Wiederholungen eines harten Satzes ein.	Enter weight and reps of a hard set.
+Geschätztes 1RM (Epley)	Estimated 1RM (Epley)
+Anteil	Percent
+Gewicht	Weight
+ca. Wdh.	approx. reps
+Noch keine Trainings zu dieser Übung, daher keine Prognose.	No workouts for this exercise yet, so no forecast.
+Für eine Prognose braucht es mindestens drei Trainings über zwei Wochen.	A forecast needs at least three workouts over two weeks.
+Noch kein Aufwärtstrend, daher keine Prognose.	No upward trend yet, so no forecast.
+Bei diesem Tempo dauert es über zwei Jahre.	At this pace it will take more than two years.
+bei aktuell +	at currently +
+kg 1RM pro Woche.	kg 1RM per week.
+Bei	For
+liegt dein 1RM seit zwei Wochen unter deinem Bestwert.	your 1RM has been below your best for two weeks.
+Deine Bereitschaft lag zuletzt im Schnitt bei	Your readiness recently averaged
+von 100.	out of 100.
+Seit	For
+Wochen trainierst du mindestens zweimal pro Woche ohne leichte Woche.	weeks you've trained at least twice a week without a light week.
+Eine leichte Woche wäre jetzt sinnvoll	A light week would make sense now
+Behalte deine Erholung im Blick	Keep an eye on your recovery
+Deload: eine Woche lang etwa 60 Prozent der Sätze und rund 90 Prozent der Gewichte. Danach startest du meist stärker.	Deload: for one week do about 60 percent of the sets at around 90 percent of the weights. You'll usually come back stronger.
+Ein Hinweis allein ist noch kein Grund zur Pause. Wenn ein zweites Zeichen dazukommt, meldet sich die App.	One sign alone is no reason to rest. If a second sign appears, the app will let you know.
+Eine Woche nicht erinnern	Don't remind me for a week
+Woche ab	Week from
+Nach Tagen mit mindestens	After days with at least
+Trainings) war dein Trainingsvolumen im Schnitt	workouts) your training volume averaged
+als nach Tagen darunter (	than after days below that (
+Trainings).	workouts).
+g Protein	g protein
+Essen und Training	Food and training
+Das ist ein Zusammenhang in deinen Daten, kein Beweis. Schlaf und Tagesform spielen mit.	This is a correlation in your data, not proof. Sleep and daily form play a part too.
+Noch zu wenig Daten (	Not enough data yet (
+Trainings mit Essens-Eintrag am Vortag). Trag Mahlzeiten ein: Ab je drei Trainings mit hoher und niedriger Zufuhr vergleicht die App für dich.	workouts with a food entry the day before). Log your meals: once there are three workouts each with high and low intake, the app compares them for you.
+Trainings ·	workouts ·
+Bericht	Report
+Woche	Week
+Monat	Month
+Früher	Earlier
+Später	Later
+In diesem Zeitraum gibt es keine Einträge.	There are no entries in this period.
+Trainingszeit	Training time
+Gegenüber	Compared to
+der Vorwoche	the previous week
+dem Vormonat	the previous month
+Davor	Before
+Muskeln	Muscles
+Essen, Schlaf, Gewicht	Food, sleep, weight
+Ernährung	Nutrition
+Tagen eingetragen	days logged
+g Protein (	g protein (
+g Ziel)	g goal)
+Keine Mahlzeiten eingetragen.	No meals logged.
+h Schlaf	h sleep
+von 100	out of 100
+kg im Zeitraum	kg in this period
+Wochenziel von	Weekly goal of
+Trainings geschafft.	workouts reached.
+Trainings.	workouts.
+Trainings in diesem Monat	workouts this month
+, mindestens so viele wie davor.	, at least as many as before.
+, weniger als davor (	, fewer than before (
+neue Bestwerte.	new bests.
+neuer Bestwert.	new best.
+% gegenüber	% compared to
+Protein lag im Schnitt unter deinem Ziel.	Protein averaged below your goal.
+Schlaf im Schnitt unter 7 Stunden.	Sleep averaged under 7 hours.
+Fazit	Summary
+Hände etwas breiter als die Schultern, Körper bildet eine Linie vom Kopf bis zu den Fersen. Brust zum Boden senken, dann hochdrücken.	Hands slightly wider than shoulders, body forms a line from head to heels. Lower your chest to the floor, then push up.
+Bauch und Gesäß fest anspannen	Brace your abs and glutes
+Ellbogen etwa 45 Grad vom Körper weg	Elbows about 45 degrees from the body
+Zu schwer? Hände erhöhen, zu leicht? Füße erhöhen	Too hard? Raise your hands. Too easy? Raise your feet
+Hängendes Becken	Sagging hips
+Kopf nach vorn gestreckt	Head pushed forward
+Nur halbe Bewegung	Only half the movement
+Hände hinter dir auf der Bank, Beine ausgestreckt. Ellbogen beugen, bis die Oberarme etwa waagerecht sind, dann strecken.	Hands behind you on the bench, legs straight. Bend your elbows until the upper arms are about level, then extend.
+Schultern tief halten	Keep shoulders down
+Ellbogen zeigen nach hinten, nicht zur Seite	Elbows point back, not out
+Schultern zu den Ohren ziehen	Shrugging shoulders up to the ears
+Zu tief absenken	Lowering too deep
+An den Holmen aufstützen, Oberkörper leicht nach vorn für mehr Brust, aufrecht für mehr Trizeps. Absenken, bis der Oberarm waagerecht ist.	Support yourself on the bars, lean slightly forward for more chest, upright for more triceps. Lower until the upper arm is level.
+Schultern tief und stabil	Shoulders low and stable
+Kontrolliert absenken, nicht fallen lassen	Lower under control, don't drop
+Mit Zusatzgewicht erst steigern, wenn 12 saubere Wiederholungen gehen	Only add weight once 12 clean reps are possible
+Schultern nach vorn rollen	Rolling shoulders forward
+Zu tiefes Absenken mit schmerzender Schulter	Going too deep with a painful shoulder
+Gewicht auf Gesichtshöhe ziehen, Ellbogen hoch und nach außen, am Ende die Schulterblätter zusammenführen. Trainiert die hintere Schulter und die Haltung.	Pull the weight to face height, elbows high and out, squeeze the shoulder blades at the end. Trains the rear delts and posture.
+Leichtes Gewicht, sauber und langsam	Light weight, clean and slow
+Kurz am Ende halten	Hold briefly at the end
+Mit Schwung ziehen	Pulling with momentum
+Mit dem Nacken statt der Schulter arbeiten	Working with the neck instead of the shoulder
+Arme leicht gebeugt in einem Bogen vor der Brust zusammenführen, als würdest du jemanden umarmen. Brust bewusst dehnen und zusammendrücken.	Bring your slightly bent arms together in an arc in front of your chest, as if hugging someone. Consciously stretch and squeeze the chest.
+Ellbogenwinkel während der Bewegung gleich halten	Keep the elbow angle constant throughout
+Schulterblätter bleiben hinten und unten	Shoulder blades stay back and down
+Leichter als beim Drücken wählen	Use less weight than for presses
+Zu viel Gewicht, dadurch wird es ein Drücken	Too much weight, turning it into a press
+Zu tief dehnen und die Schulter überlasten	Stretching too deep and overloading the shoulder
+Hände etwa schulterbreit, Ellbogen nah am Körper. Stange zur unteren Brust senken und hochdrücken. Betont den Trizeps.	Hands about shoulder width, elbows close to the body. Lower the bar to the lower chest and press up. Emphasises the triceps.
+Ellbogen nah am Körper halten	Keep elbows close to the body
+Handgelenke gerade	Wrists straight
+Hände zu eng, das belastet die Handgelenke	Hands too narrow, which strains the wrists
+Schulterblätter zusammen und nach unten, Füße fest am Boden. Gewicht kontrolliert zur Brust senken, dann explosiv hochdrücken.	Shoulder blades together and down, feet firmly on the floor. Lower the weight to the chest under control, then press up explosively.
+Schulterblätter bleiben die ganze Zeit fest	Shoulder blades stay tight the whole time
+Ellbogen etwa 45 bis 60 Grad vom Körper	Elbows about 45 to 60 degrees from the body
+Die Stange berührt die mittlere Brust (bei Schräg: obere Brust)	The bar touches the mid chest (incline: upper chest)
+Beim Langhantel-Training einen Spotter oder die Sicherheitsablage nutzen	Use a spotter or safety arms for barbell work
+Po hebt von der Bank ab	Butt lifts off the bench
+Gewicht federt von der Brust	Bouncing the weight off the chest
+Ellbogen weit nach außen (belastet die Schulter)	Elbows flared wide (strains the shoulder)
+Knie leicht gebeugt, Hüfte nach hinten schieben und den Rücken lang halten. Gewicht nah am Bein absenken, bis die Rückseite der Oberschenkel stark dehnt, dann Hüfte nach vorn.	Knees slightly bent, push the hips back and keep the back long. Lower the weight close to the legs until the hamstrings stretch strongly, then drive the hips forward.
+Die Bewegung kommt aus der Hüfte, nicht aus dem Rücken	The movement comes from the hips, not the back
+Stange oder Hanteln gleiten nah am Körper	Bar or dumbbells glide close to the body
+Blick geradeaus oder leicht nach unten	Look straight ahead or slightly down
+Runder Rücken	Rounded back
+Knie zu stark beugen (wird zur Kniebeuge)	Bending the knees too much (turns into a squat)
+Gewicht weit vom Körper	Weight far from the body
+Stange nah am Schienbein, Rücken gerade und Brust raus. Mit den Beinen aus dem Boden drücken, dann die Hüfte strecken. Oben aufrecht stehen, nicht überstrecken.	Bar close to the shins, back straight and chest up. Push the floor away with your legs, then extend the hips. Stand tall at the top without leaning back.
+Vor dem Zug Körperspannung aufbauen	Build full-body tension before the pull
+Stange bleibt die ganze Zeit am Körper	The bar stays close to the body the whole time
+Ablegen kontrolliert, nicht fallen lassen	Set it down under control, don't drop it
+Anfangs mit Gürtel und Gurten erst bei schweren Sätzen	Start without a belt, use straps only for heavy sets
+Hüfte schießt zuerst hoch	Hips shoot up first
+Stange zu weit vorn	Bar too far forward
+Schulterbreit greifen, Schulterblätter zuerst nach unten ziehen, dann das Kinn über die Stange bringen. Kontrolliert wieder ablassen.	Grip shoulder width, pull the shoulder blades down first, then bring the chin over the bar. Lower under control.
+Ganz hängen, ganz hochziehen	Hang fully, pull fully
+Zu schwer? Gummiband oder Negativ-Wiederholungen	Too hard? Use a band or negative reps
+Untergriff betont den Bizeps stärker	Underhand grip works the biceps more
+Schwung aus den Beinen	Swinging with the legs
+Nur halbe Wiederholungen	Only half reps
+Schultern zu den Ohren	Shoulders up to the ears
+Leicht nach hinten lehnen, Stange zur oberen Brust ziehen und die Ellbogen nach unten führen. Oben die Schultern nicht hochziehen.	Lean back slightly, pull the bar to the upper chest and drive the elbows down. Don't shrug at the top.
+Denk an Ellbogen zu den Hosentaschen	Think elbows to your pockets
+Brust raus, Schulterblätter zusammen	Chest up, shoulder blades together
+Langsam zurück, Arme ganz strecken	Return slowly, extend the arms fully
+Mit dem Oberkörper wippen	Rocking the upper body
+Stange hinter den Nacken	Bar behind the neck
+Mit den Armen statt dem Rücken ziehen	Pulling with the arms instead of the back
+Rücken gerade, Oberkörper stabil. Zum Bauchnabel ziehen und die Schulterblätter am Ende zusammendrücken. Kontrolliert zurück.	Back straight, torso stable. Pull to the belly button and squeeze the shoulder blades at the end. Return under control.
+Ellbogen eng am Körper	Elbows close to the body
+Kurz halten in der Endposition	Hold briefly in the end position
+Gewicht so wählen, dass der Oberkörper still bleibt	Choose a weight that keeps your torso still
+Mit Schwung aus dem Rücken ziehen	Pulling with momentum from the back
+Schultern hochziehen	Shrugging the shoulders
+Hüfte auf dem Polster, Oberkörper aus der Hüfte senken und wieder bis zur geraden Linie heben. Nicht überstrecken.	Hips on the pad, lower the torso from the hips and raise it back to a straight line. Don't overextend.
+Gesäß mit anspannen	Squeeze the glutes too
+Langsam und kontrolliert	Slow and controlled
+Zu weit nach hinten überstrecken	Overextending backwards
+Mit Schwung arbeiten	Using momentum
+Schultern gerade nach oben zu den Ohren ziehen, oben kurz halten, langsam senken.	Pull the shoulders straight up to the ears, hold briefly at the top, lower slowly.
+Kein Kreisen	No rolling
+Kopf bleibt neutral	Head stays neutral
+Zu viel Gewicht mit kleinen Bewegungen	Too much weight with tiny movements
+Fest stehen oder sitzen, Bauch und Gesäß anspannen. Gewicht von Schulterhöhe nach oben drücken, bis die Arme gestreckt sind.	Stand or sit firmly, brace abs and glutes. Press the weight from shoulder height overhead until the arms are straight.
+Unterarme bleiben senkrecht	Forearms stay vertical
+Kopf kurz zurück, wenn die Stange vorbeikommt	Move the head back briefly as the bar passes
+Rippen unten halten, nicht ins Hohlkreuz	Keep the ribs down, don't arch the lower back
+Hohlkreuz	Arched lower back
+Mit den Beinen mitdrücken (außer bei Push Press)	Pushing with the legs (except for push press)
+Ellbogen zu weit nach hinten	Elbows too far back
+Arme leicht gebeugt seitlich bis etwa Schulterhöhe heben, als würdest du Wasser aus Krügen gießen. Langsam senken.	Raise your slightly bent arms out to the side to about shoulder height, like pouring water from jugs. Lower slowly.
+Leichtes Gewicht, saubere Bewegung	Light weight, clean movement
+Ellbogen führen, nicht die Hände	Lead with the elbows, not the hands
+Nicht höher als die Schulter	Not higher than the shoulder
+Mit Schwung aus dem Rücken	Swinging from the back
+Zu schwer gewählt	Too heavy
+Gewicht kontrolliert bis etwa Schulterhöhe heben, Oberkörper bleibt still. Langsam absenken.	Raise the weight under control to about shoulder height, torso stays still. Lower slowly.
+Gesäß und Bauch anspannen	Brace glutes and abs
+Leichter wählen als beim Drücken	Use less weight than for presses
+Ins Hohlkreuz lehnen	Leaning into an arched back
+Unterarme aufgelegt, nur die Handgelenke bewegen. Gewicht heben und langsam senken.	Forearms supported, move only the wrists. Raise the weight and lower slowly.
+Leicht und mit vielen Wiederholungen	Light and with many reps
+Volle Bewegung	Full range of motion
+Unterarme heben von der Auflage ab	Forearms lift off the support
+Ellbogen am Körper fixieren, Gewicht hochbeugen und oben kurz anspannen. Langsam wieder senken, bis der Arm fast gestreckt ist.	Pin the elbows to your sides, curl the weight up and squeeze at the top. Lower slowly until the arm is almost straight.
+Ellbogen bleiben stehen	Elbows stay in place
+Langsames Senken (2 bis 3 Sekunden)	Lower slowly (2 to 3 seconds)
+Mit dem Rücken schwingen	Swinging with the back
+Ellbogen wandern nach vorn	Elbows drift forward
+Halbe Wiederholungen	Half reps
+Oberer Rücken auf der Bank, Füße fest am Boden. Hüfte hochdrücken, bis Oberschenkel und Rücken eine Linie bilden, oben das Gesäß fest anspannen.	Upper back on the bench, feet firmly on the floor. Drive the hips up until thighs and back form a line, squeeze the glutes hard at the top.
+Kinn leicht zur Brust	Chin slightly tucked
+Schienbeine sind oben senkrecht	Shins are vertical at the top
+Oben eine Sekunde halten	Hold for one second at the top
+Hohlkreuz oben	Arched back at the top
+Fersen heben ab	Heels lift off
+Hüfte nicht ganz strecken	Not fully extending the hips
+Oberarme bleiben fest, nur die Unterarme bewegen. Gewicht strecken, oben kurz anspannen, kontrolliert zurück.	Upper arms stay fixed, only the forearms move. Extend the weight, squeeze briefly at the top, return under control.
+Ellbogen zeigen nach vorn oder unten	Elbows point forward or down
+Bei Skullcrushern Gewicht hinter den Kopf, nicht auf die Stirn senken	For skullcrushers lower the weight behind the head, not onto the forehead
+Volle Streckung oben	Full extension at the top
+Ellbogen driften nach außen	Elbows drift outward
+Schultern mit einsetzen	Using the shoulders
+Zu schweres Gewicht	Weight too heavy
+Füße etwa schulterbreit, Fußspitzen leicht nach außen. Hüfte und Knie gleichzeitig beugen, bis die Oberschenkel mindestens waagerecht sind, Brust oben halten, dann aufstehen.	Feet about shoulder width, toes slightly out. Bend hips and knees together until the thighs are at least parallel, keep the chest up, then stand up.
+Knie folgen den Fußspitzen	Knees track over the toes
+Ganzer Fuß bleibt am Boden	Whole foot stays on the floor
+Atem vor dem Abwärtsgehen holen und Körperspannung aufbauen	Take a breath and brace before going down
+Sicherheitsablage nutzen, wenn du allein trainierst	Use safety arms when training alone
+Knie fallen nach innen	Knees cave in
+Rücken rundet sich unten	Back rounds at the bottom
+Zu wenig Tiefe	Not deep enough
+Rücken fest am Polster, Füße schulterbreit auf der Platte. Knie kontrolliert beugen und wieder strecken, ohne die Knie ganz durchzudrücken.	Back firmly against the pad, feet shoulder width on the platform. Bend the knees under control and extend again without locking them out.
+Becken bleibt am Polster	Pelvis stays on the pad
+Knie in Richtung der Fußspitzen	Knees in line with the toes
+Becken hebt unten ab	Pelvis lifts at the bottom
+Knie komplett durchgestreckt	Knees fully locked out
+Großer Schritt, hinteres Knie senkt sich Richtung Boden, vorderes Knie bleibt über dem Fuß. Mit dem vorderen Bein wieder hochdrücken.	Big step, the rear knee lowers towards the floor, the front knee stays over the foot. Push back up with the front leg.
+Oberkörper aufrecht	Upright torso
+Schrittlänge so wählen, dass der vordere Schienbeinwinkel etwa senkrecht bleibt	Choose a stride length that keeps the front shin roughly vertical
+Bei Wackeln: kurz an etwas festhalten	If wobbly: hold on to something briefly
+Vorderes Knie schiebt weit über die Zehen	Front knee pushes far past the toes
+Knie fällt nach innen	Knee caves in
+Zu kleine Schritte	Steps too short
+Knie in der Drehachse der Maschine, Beine bis fast zur Streckung heben und oben kurz anspannen. Langsam senken.	Knees aligned with the machine's pivot, raise the legs to almost straight and squeeze briefly at the top. Lower slowly.
+Rücken fest am Polster	Back firmly against the pad
+Gewicht kontrolliert absenken	Lower the weight under control
+Mit Schwung hochschleudern	Swinging the weight up
+Knie ganz durchdrücken	Locking the knees out
+Fersen zum Gesäß ziehen, oben kurz anspannen, langsam zurück. Hüfte bleibt am Polster.	Pull your heels to your glutes, squeeze briefly at the top, return slowly. Hips stay on the pad.
+Langsames Senken (3 Sekunden)	Lower slowly (3 seconds)
+Hüfte nicht anheben	Don't lift the hips
+Hüfte hebt ab	Hips lift off
+Zu viel Schwung	Too much momentum
+Auf den Fußballen so hoch wie möglich, oben kurz halten, unten voll dehnen. Langsam und mit voller Bewegung.	Rise onto the balls of your feet as high as possible, hold briefly at the top, stretch fully at the bottom. Slow and with full range.
+Pause unten und oben	Pause at the bottom and top
+Sitzend trifft den tieferen Wadenmuskel, stehend den äußeren	Seated hits the deeper calf muscle, standing the outer one
+Federn ohne volle Dehnung	Bouncing without a full stretch
+Zu schnelle Wiederholungen	Reps too fast
+Auf den Unterarmen, Körper bildet eine gerade Linie. Bauch und Gesäß fest anspannen und die Position halten.	On your forearms, body forms a straight line. Brace abs and glutes and hold the position.
+Kopf in Verlängerung der Wirbelsäule	Head in line with the spine
+Gleichmäßig atmen	Breathe evenly
+Gesäß zu hoch	Hips too high
+Bauch aktiv anspannen, den unteren Rücken am Boden oder stabil halten. Langsam und kontrolliert ausführen.	Actively brace your abs, keep the lower back on the floor or stable. Move slowly and under control.
+Lieber wenige saubere als viele hektische Wiederholungen	Better a few clean reps than many hurried ones
+Ausatmen bei der Anstrengung	Exhale on the effort
+Am Nacken ziehen	Pulling on the neck
+Schwere Gewichte aufnehmen, aufrecht gehen, Schultern tief und Griff fest. Kurze, kontrollierte Schritte.	Pick up heavy weights, walk upright, shoulders down and grip tight. Short, controlled steps.
+Schulterblätter nach hinten unten	Shoulder blades back and down
+Bauch fest anspannen	Brace your abs
+Schultern ziehen nach vorn	Shoulders pull forward
+Seitlich neigen	Leaning to the side
+Drücken: Schulterblätter fixieren, Ellbogen nicht ganz nach außen.	Pressing: fix the shoulder blades, elbows not flared all the way.
+Ziehen: erst die Schulterblätter bewegen, dann die Arme.	Pulling: move the shoulder blades first, then the arms.
+Leichte Gewichte und saubere Technik schützen die Schulter.	Light weights and clean technique protect the shoulder.
+Ellbogen fixieren, langsam senken.	Fix the elbows, lower slowly.
+Oberarm fixieren, volle Streckung.	Fix the upper arm, full extension.
+Leicht und mit vielen Wiederholungen.	Light and with many reps.
+Knie folgen den Fußspitzen.	Knees track over the toes.
+Hüfte aktiv beugen, Rücken gerade.	Hinge actively at the hips, back straight.
+Oben die Hüfte ganz strecken und anspannen.	Fully extend and squeeze the hips at the top.
+Volle Dehnung, kurze Pause oben.	Full stretch, short pause at the top.
+Kontrolle statt Schwung.	Control instead of momentum.
+Wähle ein Gewicht, mit dem du alle Wiederholungen sauber schaffst. Bewege dich langsam, nutze den vollen Bewegungsumfang und halte den Rumpf stabil.	Choose a weight that lets you do all reps cleanly. Move slowly, use the full range of motion and keep your core stable.
+Technik vor Gewicht.	Technique before weight.
+Senken in 2 bis 3 Sekunden, Heben kontrolliert	Lower in 2 to 3 seconds, lift under control
+Schwung statt Muskelkraft	Momentum instead of muscle
+Hauptmuskel	Main muscle
+Nebenmuskeln	Secondary muscles
+Gerät	Equipment
+So geht’s	How to
+Tipps	Tips
+Typische Fehler	Common mistakes
+Dein Stand	Your level
+Bestleistung	Best performance
+Allgemeine Hinweise, keine Trainerberatung. Bei Schmerzen abbrechen und Gewicht senken.	General guidance, not coaching. Stop if it hurts and lower the weight.
+Anfänger	Novice
+Kraft-Standards	Strength standards
+1RM zu Körpergewicht	1RM to body weight
+Maßstab	Scale
+Männer	Men
+Frauen	Women
+Sobald du Bankdrücken, Kniebeugen, Kreuzheben, Schulterdrücken, Rudern, Klimmzüge, Dips oder Hip Thrust trainiert hast, siehst du hier deine Einstufung.	Once you've trained bench press, squat, deadlift, overhead press, rows, pull-ups, dips or hip thrust, you'll see your rating here.
+× Körpergewicht	× body weight
+kg bis	kg to
+höchste Stufe	top level
+Grobe Richtwerte aus bekannten Kraftstandards, gerechnet mit	Rough guidelines from well-known strength standards, calculated with
+kg Körpergewicht	kg body weight
+Voriges Jahr	Previous year
+Nächstes Jahr	Next year
+Für	For
+gibt es keine Trainings.	there are no workouts.
+Autos	cars
+So viel hast du insgesamt bewegt, gerechnet mit 1,5 t pro Auto.	That's how much you've moved in total, counting 1.5 t per car.
+Lieblingsübung	Favourite exercise
+Stärkster Monat	Strongest month
+Lieblings-Wochentag	Favourite weekday
+Wochen	weeks
+in Folge trainiert	trained in a row
+Härtestes Training	Hardest workout
+Meist trainiert	Most trained
+Rekorde des Jahres	Records of the year
+Rückblick teilen	Share review
+Mein Trainingsjahr	My training year
+Trainings:	Workouts:
+Sätze:	Sets:
+Volumen:	Volume:
+Trainingszeit:	Training time:
+Rekorde:	Records:
+Punkte:	Points:
+Lieblingsübung:	Favourite exercise:
+Stärkster Monat:	Strongest month:
+Längste Serie:	Longest streak:
+Speichere ein Gericht aus mehreren Lebensmitteln und trage es später mit einem Tipp ein.	Save a dish made of several foods and log it later with one tap.
+Zutaten · P	ingredients · P
+Eintragen	Log
+Vorlage löschen	Delete template
+Noch keine Vorlage.	No template yet.
+Neue Vorlage	New template
+Trag zuerst die Zutaten als Einträge ein. Danach machst du daraus hier eine Vorlage.	First log the ingredients as entries. Then turn them into a template here.
+Aus Einträgen von	From entries of
+z. B. Mein Frühstück	e.g. My breakfast
+Alle Einträge des Tages	All entries of the day
+Vorlage speichern	Save template
+Dir fehlen noch	You still need
+Frühstück eintragen	Log breakfast
+Frühstück nicht vergessen einzutragen.	Don't forget to log your breakfast.
+Mittagessen eintragen	Log lunch
+Trag dein Mittagessen ein.	Log your lunch.
+Abendessen eintragen	Log dinner
+Trag dein Abendessen ein.	Log your dinner.
+Wasser trinken	Drink water
+Zeit für ein Glas Wasser.	Time for a glass of water.
+Supplements nehmen.	Take your supplements.
+Wiegen (sonntags)	Weigh-in (Sundays)
+Wiege dich und trag das Gewicht ein.	Weigh yourself and log your weight.
+Erholungs-Check-in	Recovery check-in
+Kurzer Check-in für deine Erholung.	Quick check-in for your recovery.
+Datum	Date
+Gewicht kg	Weight kg
+Muskel	Muscle
+Bestes Training	Best workout
+Wiederholungen	Reps
+Geschätztes 1RM kg	Estimated 1RM kg
+Arbeitssatz	Working set
+Aufwärmsatz	Warm-up set
+Dropsatz	Drop set
+Fehlversuch	Failed attempt
+-Modus aktiv bis	mode active until
+Deine Wochenserie bleibt geschützt. Trainingserinnerungen pausieren.	Your week streak stays protected. Workout reminders are paused.
+Pause beenden	End break
+Urlaub oder krank? Pause einlegen	On holiday or sick? Take a break
+Musik öffnen	Open music
+Kein aktives Training.	No active workout.
+Ersatz für	Replacement for
+Gleicher Hauptmuskel (	Same main muscle (
+). Oben stehen Übungen mit dem gleichen Gerät.	). Exercises with the same equipment are at the top.
+Keine passende Übung gefunden. Prüfe dein Equipment in den Einstellungen.	No matching exercise found. Check your equipment in the settings.
+Importierter Plan	Imported plan
+Aus BMI und Alter	From BMI and age
+Aus Taille und Nacken (Navy-Methode)	From waist and neck (Navy method)
+, Hüfte	, hips
+unter Wettkampfniveau	below competition level
+Körperfett schätzen	Estimate body fat
+Das ist nur eine grobe Schätzung. Für Verläufe ist wichtiger, immer gleich zu messen.	This is only a rough estimate. For tracking, measuring the same way every time matters more.
+Größe (cm)	Height (cm)
+Alter (Jahre)	Age (years)
+Nackenumfang (cm, optional, für die genauere Methode)	Neck circumference (cm, optional, for the more precise method)
+Maßstab:	Scale:
+Berechnen	Calculate
+Trag mindestens Größe und Alter ein. Für die Navy-Methode brauchst du außerdem Nacken und Taille.	Enter at least height and age. The Navy method also needs neck and waist.
+Schätzung	Estimate
+kg Fett	kg fat
+kg fettfrei	kg lean mass
+Als Stand speichern	Save as current value
+Körperfett	Body fat
+Schätzen	Estimate
+Letzte Schätzung	Last estimate
+Schätze deinen Körperfettanteil aus Größe, Alter und Maßen.	Estimate your body fat percentage from height, age and measurements.
+Laufen	Running
+Radfahren	Cycling
+Schwimmen	Swimming
+Rudern	Rowing
+Gehen/Wandern	Walking/Hiking
+Crosstrainer	Elliptical
+Cardio und Schritte	Cardio and steps
++ Schritte	+ Steps
+Trag Läufe, Radfahrten oder deine Schritte ein.	Log runs, rides or your steps.
+Die Schritte kommen automatisch, wenn du in den Einstellungen Health Connect verbindest.	Steps come in automatically once you connect Health Connect in the settings.
+Die Schritte trägst du von Hand ein.	You log your steps by hand.
+Cardio pro Woche (Minuten)	Cardio per week (minutes)
+Cardio Minuten pro Woche	Cardio minutes per week
+Schritte, letzte 7 Tage (gestrichelt: Ziel)	Steps, last 7 days (dashed: goal)
+Schritte pro Tag	Steps per day
+Kraft-Score von 100	Strength score out of 100
+kg Total (BD+KB+KH)	kg total (BP+SQ+DL)
+Total pro kg Körpergewicht	Total per kg body weight
+Übungen gewertet	exercises rated
+Ballaststoffe, Zucker, Salz	Fibre, sugar, salt
+Ballaststoffe	Fibre
+Zucker	Sugar
+Salz	Salt
+Einträgen haben diese Angaben. Per Barcode oder Online-Suche kommen sie automatisch mit.	entries have these values. They come in automatically via barcode or online search.
+Noch nichts eingetragen.	Nothing logged yet.
+Fasten	Fasting
+Dein Fastenziel von	Your fasting goal of
+Stunden ist erreicht.	hours is reached.
+Intervall-Timer	Interval timer
+Stunden	Hours
+Ziel erreicht.	Goal reached.
+Du kannst jetzt essen.	You can eat now.
+Noch	Still
+Stunden.	hours.
+Fasten beenden	End fast
+Fasten starten (	Start fast (
+mal Ziel erreicht.	times goal reached.
+Kaffee	Coffee
+Schwarztee	Black tea
+Grüntee	Green tea
+Energy Drink	Energy drink
+Pre-Workout	Pre-workout
+Tablette	Tablet
+Koffein	Caffeine
+Halbwertszeit etwa 5 Stunden	Half-life about 5 hours
+mg aktiv jetzt	mg active now
+mg heute (Richtwert max. 400)	mg today (guideline max. 400)
+Unter 25 mg ab etwa	Below 25 mg from about
+Zum Schlafen um	At a bedtime of
+Uhr wären noch etwa	there would still be about
+mg aktiv. Das kann den Schlaf stören.	mg active. That can disturb your sleep.
+Uhr ist kaum noch Koffein aktiv.	hardly any caffeine is active.
+Schlafenszeit	Bedtime
+Uhr	o'clock
+Bier 0,5 l	Beer 0.5 l
+Weizen 0,5 l	Wheat beer 0.5 l
+Wein 0,2 l	Wine 0.2 l
+Sekt 0,1 l	Sparkling wine 0.1 l
+Schnaps 2 cl	Spirits 2 cl
+Cocktail 0,3 l	Cocktail 0.3 l
+Alkohol-Tagebuch	Alcohol diary
+reiner Alkohol	pure alcohol
+g heute	g today
+g diese Woche	g this week
+trinkfreie Tage von 7	alcohol-free days out of 7
+Heute etwa	Today about
+kcal aus Alkohol. Sie sind nicht in der Essens-Bilanz.	kcal from alcohol. They are not in the food balance.
+Dein Schlaf nach Alkohol-Tagen: Ø	Your sleep after drinking days: Ø
+h, sonst Ø	h, otherwise Ø
+Meal-Prep	Meal prep
++ Planen	+ Plan
+Portionen im Vorrat ·	portions in stock ·
+pro Portion	per portion
+Plane, wie viele Portionen du vorkochst. Die App rechnet die Einkaufsmenge aus und zählt deinen Vorrat. Dafür brauchst du eine Mahlzeiten-Vorlage.	Plan how many portions you cook ahead. The app works out the shopping amounts and counts your stock. You need a meal template for this.
+Meal-Prep planen	Plan meal prep
+Speichere zuerst im Essen-Tab eine Mahlzeiten-Vorlage. Daraus plane ich dann die Portionen.	First save a meal template in the Food tab. I'll plan the portions from that.
+Gericht	Dish
+Portionen	Portions
+kcal pro Portion	kcal per portion
+kcal gesamt	kcal total
+Einkaufsliste für	Shopping list for
+Liste kopieren	Copy list
+In den Vorrat	Add to stock
+g Kohlenh. / Fett	g carbs / fat
+Dein Kalorienziel ist für heute erreicht. Wasser, Tee oder Gemüse gehen immer.	You've reached your calorie goal for today. Water, tea or vegetables are always fine.
+Deine Vorlagen	Your templates
+Einzelne Lebensmittel	Single foods
+Nichts in deiner Datenbank passt zu den Resten. Probier etwas Leichtes.	Nothing in your database fits what's left. Try something light.
+Muskelkater heute	Soreness today
+Tippe einen Muskel an: leicht, mittel, stark, wieder aus. Starker Muskelkater verlängert die Erholungszeit.	Tap a muscle: light, medium, strong, off again. Strong soreness extends the recovery time.
+Akzentfarbe	Accent colour
+Titel „	Title “
+Belohnungen	Rewards
+als Nächstes bei Level	next at level
+alles freigeschaltet	everything unlocked
+Neue Farben wählst du in den Einstellungen unter Aussehen.	Choose new colours in the settings under Appearance.
+Duell	Duel
+Du hast gewonnen.	You won.
+hat gewonnen.	won.
+Unentschieden.	Draw.
+Hol dir von	Get a new code from
+einen neuen Code, damit der Endstand stimmt.	so the final score is right.
+Tag	Day
+, um ihren Stand zu aktualisieren.	to update their score.
+Code einlesen	Read code
+Entfernen	Remove
+Keine Verbindung. Das klappt nur in der installierten App mit Internet.	No connection. This only works in the installed app with internet.
+Nichts gefunden. Probier einen anderen Suchbegriff.	Nothing found. Try a different search term.
+Online suchen	Search online
+z. B. Magerquark	e.g. low-fat quark
+Suchen	Search
+Suche läuft …	Searching …
+Werte pro 100 g aus Open Food Facts und der US-Datenbank USDA (englische Namen). Prüfe sie bei wichtigen Einträgen.	Values per 100 g from Open Food Facts and the US database USDA. Double-check them for important entries.
+Mein Equipment	My equipment
+Nur meine Geräte zeigen	Only show my equipment
+Übungsauswahl und Austausch zeigen dann nur Übungen mit deinem Equipment.	Exercise selection and swapping then only show exercises with your equipment.
+Das habe ich	I have this
+Musik-Link	Music link
+Hinterlege einen Link zu deiner Trainings-Playlist. Im Training erscheint ein Knopf, der ihn öffnet.	Save a link to your workout playlist. A button to open it appears during workouts.
+Speichern	Save
+Plan teilen	Share plan
+Speichere die Vorlage zuerst.	Save the template first.
+Schick diesen Code an einen Freund. Er fügt ihn unter Einstellungen → Plan einlesen ein.	Send this code to a friend. They paste it under Settings → Import plan.
+Plan-Code	Plan code
+Code kopieren	Copy code
+Plan einlesen	Import plan
+Code einfügen	Paste code
+Pause einlegen	Take a break
+Deine Wochenserie bleibt in dieser Zeit geschützt, und die Trainingserinnerungen pausieren.	Your week streak stays protected during this time, and workout reminders pause.
+Art	Type
+Urlaub	Holiday
+Krank	Sick
+Von	From
+Bis	To
+Pause starten	Start break
+Cardio eintragen	Log cardio
+Dauer (Minuten)	Duration (minutes)
+Strecke (km, optional)	Distance (km, optional)
+Schritte eintragen	Log steps
+Schritte	Steps
+Tagesziel	Daily goal
+Übung oder Muskel suchen	Search exercise or muscle
+Bibliothek durchsuchen	Search library
+Gewicht (kg)	Weight (kg)
+Zielgewicht (kg, optional)	Goal weight (kg, optional)
+z. B. 78,5	e.g. 78.5
+Letzte Einträge	Recent entries
+Sortierung	Sort by
+Neueste	Newest
+Stärkste	Strongest
+A bis Z	A to Z
+Suchen (Übung oder Muskel)	Search (exercise or muscle)
+Bestwerte suchen	Search bests
+Pro Übung der Training mit dem höchsten geschätzten 1RM.	For each exercise, the workout with the highest estimated 1RM.
+Lege fest, welche Vorlage an welchem Tag dran ist.	Choose which template is due on which day.
+Ruhetag	Rest day
+Erinnerung	Reminder
+Am Trainingstag erinnern	Remind me on training days
+Uhrzeit	Time
+Erinnerungen funktionieren nur in der installierten Android-App, nicht in dieser Web-Ansicht.	Reminders only work in the installed Android app, not in this web view.
+Hantelscheiben	Weight plates
+Zielgewicht (kg)	Target weight (kg)
+Stange (kg)	Bar (kg)
+Ältere Stände	Older versions
+Der Ordner Dokumente/GymTracker/Verlauf ist nicht lesbar.	The folder Documents/GymTracker/Verlauf can't be read.
+Lädt…	Loading…
+Noch keine älteren Stände. Die App legt jeden Tag einen an.	No older versions yet. The app creates one every day.
+Die App speichert jeden Tag einen Stand im Ordner Dokumente/GymTracker/Verlauf und hebt die letzten	The app saves a version every day in the folder Documents/GymTracker/Verlauf and keeps the last
+Tage auf.	days.
+Einstellungen	Settings
+Pausen	Rest
+Standard-Pause	Default rest
+Gilt für alle Übungen ohne eigene Pause.	Applies to all exercises without their own rest time.
+Auf alle Übungen anwenden	Apply to all exercises
+Pause pro Übung merken	Remember rest per exercise
+Eine geänderte Pause gilt beim nächsten Mal wieder.	A changed rest time applies again next time.
+Signal bei Pausenende	Signal when rest ends
+Ton	Sound
+Ton testen	Test sound
+Benachrichtigung	Notification
+Meldet sich auch bei gesperrtem Bildschirm oder wenn die App im Hintergrund ist.	Also alerts you when the screen is locked or the app is in the background.
+Funktioniert nur in der installierten Android-App.	Only works in the installed Android app.
+Timer im Sperrbildschirm	Timer on lock screen
+Zeigt die laufende Pause mit Countdown in den Benachrichtigungen und auf dem Sperrbildschirm.	Shows the running rest with a countdown in notifications and on the lock screen.
+Sprache	Language
+Level und Vergleich	Level and comparison
+Name, Code und Freunde	Name, code and friends
+Planung und Listen	Planning and lists
+Wochenplan und Erinnerung	Weekly plan and reminder
+Aussehen	Appearance
+Darstellung	Display
+Hell	Light
+Dunkel	Dark
+Farbe	Colour
+Daten sichern	Back up data
+Backup speichern	Save backup
+Trainings (CSV)	Workouts (CSV)
+Essen (CSV)	Food (CSV)
+Körper (CSV)	Body (CSV)
+Bestwerte (CSV)	Bests (CSV)
+Backup einlesen	Restore backup
+Auto-Backup:	Auto backup:
+nicht möglich, der Zugriff auf Dokumente fehlt. Nutze „Backup speichern“.	not possible, access to Documents is missing. Use “Save backup”.
+zuletzt um	last at
+Uhr im Ordner Dokumente/GymTracker.	in the folder Documents/GymTracker.
+Die App legt nach jeder Änderung eine Datei im Ordner Dokumente/GymTracker ab.	The app saves a file in the folder Documents/GymTracker after every change.
+Zusätzlich hebt sie den Stand der letzten	It also keeps the state of the last
+Auto-Backup einlesen	Restore auto backup
+Letzte Sicherung außerhalb der App:	Last backup outside the app:
+Noch keine Sicherung außerhalb der App.	No backup outside the app yet.
+Tippe auf „Backup speichern“ und wähle Google Drive, dann sind deine Daten auch sicher, wenn das Handy verloren geht.	Tap “Save backup” and choose Google Drive, then your data is safe even if you lose your phone.
+Alle Eingaben werden sofort automatisch gespeichert. Ein Backup schützt zusätzlich, wenn die App deinstalliert wird. Fotos sind nicht im Backup.	Everything you enter is saved automatically right away. A backup also protects you if the app is uninstalled. Photos are not in the backup.
+Beispieldaten entfernen	Remove sample data
+Dein Name in der Rangliste	Your name on the leaderboard
+z. B. Toni	e.g. Alex
+Dein Code (an Freunde schicken)	Your code (send to friends)
+Dein Code	Your code
+Code von einem Freund einfügen	Paste a friend's code
+Code eines Freundes	Friend's code
+Zur Rangliste hinzufügen	Add to leaderboard
+Freunde	Friends
+Punkte · Stand	points · as of
+Der Code enthält nur Name, Level, Punkte und Serie. Er ist eine Momentaufnahme: Bittet euch gegenseitig ab und zu um einen neuen Code, dann aktualisiert sich der Stand.	The code only contains name, level, points and streak. It's a snapshot: ask each other for a new code now and then to update the score.
++ Neue Übung	+ New exercise
+Suchen (Name, Muskel, Gerät)	Search (name, muscle, equipment)
+Übungen suchen	Search exercises
+Übung bearbeiten	Edit exercise
+Neue Übung	New exercise
+z. B. Schrägbankdrücken Maschine	e.g. Machine incline press
+Arbeitet nebenbei mit (Nebenmuskeln)	Also works (secondary muscles)
+Einseitige Übung	One-sided exercise
+Du trägst Wiederholungen für links und rechts getrennt ein.	You log reps for left and right separately.
+Bei Körpergewichts-Übungen trägst du das Zusatzgewicht ein, 0 für ohne. Volumen und 1RM rechnen dein Körpergewicht aus dem Erholungs-Check-in mit ein.	For bodyweight exercises, enter the added weight, 0 for none. Volume and 1RM include your body weight from the recovery check-in.
+Diese Übung ist in Trainings, Vorlagen oder Zielen im Einsatz und lässt sich deshalb nicht löschen.	This exercise is used in workouts, templates or goals and can't be deleted.
+Neues Ziel	New goal
+Zielgewicht (geschätztes 1RM in kg)	Goal weight (estimated 1RM in kg)
+Ziel speichern	Save goal
+z. B. 100	e.g. 100
+Vergleich	Comparison
+Foto	Photo
+Tage dazwischen.	days apart.
+Körpermaße messen	Take body measurements
+Lass leer, was du nicht gemessen hast.	Leave blank what you didn't measure.
+Letzte Messungen	Recent measurements
+Messung löschen	Delete measurement
+Noch keine Supplements.	No supplements yet.
+Dosis	Dose
+z. B. Magnesium	e.g. Magnesium
+Hinzufügen	Add
+z. B. 300 mg	e.g. 300 mg
+Werte pro 100 g. Beim Eintragen gibst du nur noch die Menge an.	Values per 100 g. When logging you only enter the amount.
+z. B. Hüttenkäse	e.g. Cottage cheese
+Kohl.	Carbs
+Lebensmittel suchen	Search foods
+Vorlage bearbeiten	Edit template
+z. B. Oberkörper A	e.g. Upper body A
++ Übung hinzufügen	+ Add exercise
+Teilen	Share
+Eintrag hinzufügen	Add entry
+Aus Datenbank	From database
+Barcode scannen	Scan barcode
+Was hast du gegessen?	What did you eat?
+z. B. Skyr mit Haferflocken	e.g. Skyr with oats
+Menge (g)	Amount (g)
+Pro 100 g:	Per 100 g:
+In Lebensmittel-Datenbank merken	Remember in food database
+Mahlzeit	Meal
+Kohlenh. (g)	Carbs (g)
+Fett (g)	Fat (g)
+Ballast. (g)	Fibre (g)
+Zucker (g)	Sugar (g)
+Salz (g)	Salt (g)
+Kalorien (kcal)	Calories (kcal)
+Die Kalorien werden aus den Makros berechnet, solange du sie nicht selbst eingibst (4 kcal je g Protein und Kohlenhydrate, 9 kcal je g Fett).	Calories are calculated from the macros as long as you don't enter them yourself (4 kcal per g of protein and carbs, 9 kcal per g of fat).
+Tagesziele	Daily goals
+Kohlenhydrate (g)	Carbs (g)
+Wasser (ml)	Water (ml)
+Die Makros ergeben	The macros add up to
+Favoriten	Favourites
+“ neu anlegen	” as new
+Muskelgruppe	Muscle group
+Gerätetyp	Equipment type
+Übung anlegen	Create exercise
+Nichts gefunden. Lege das Lebensmittel unter „Lebensmittel“ an oder scanne den Barcode.	Nothing found. Add the food under “Foods” or scan the barcode.
+Mit Kamera scannen	Scan with camera
+Oder Nummer unter dem Strichcode eintippen	Or type the number under the barcode
+z. B. 4008400402222	e.g. 4008400402222
+Die Produktsuche nutzt Open Food Facts und braucht Internet.	The product search uses Open Food Facts and needs internet.
+Lebensmittel wählen	Choose food
+Übung wählen	Choose exercise
+Suchen oder neue Übung eintippen	Search or type a new exercise
+Beispieldaten aktiv. Sie zeigen dir, wie die Auswertungen aussehen.	Sample data active. It shows you what the analyses look like.
+Rückgängig	Undo
+Freies Training	Free workout
+Keine Sätze abgehakt, nichts gespeichert	No sets checked off, nothing saved
+erreicht!	reached!
+Neue Farbe:	New colour:
+Pause	Rest
+Weiter	Next
+Pause vorbei, weiter geht’s	Rest over, let's go
+Benachrichtigungen sind nicht erlaubt	Notifications are not allowed
+Heute steht	Today is
+Erinnerungen konnten nicht gesetzt werden	Reminders could not be set
+Suche nach	Searching for
+Zu	For
+gibt es keinen Eintrag. Probier die Online-Suche mit dem Produktnamen oder trag die Werte von Hand ein.	there is no entry. Try the online search with the product name or enter the values by hand.
+Produkt	Product
+Gefunden:	Found:
+Keine Verbindung zu Open Food Facts. Das klappt nur in der installierten App mit Internet.	No connection to Open Food Facts. This only works in the installed app with internet.
+Kein Code erkannt.	No code detected.
+Der Scanner wird eingerichtet. Versuche es in einer Minute noch einmal oder tippe die Nummer ein.	The scanner is being set up. Try again in a minute or type the number.
+Kamera-Scan ist hier nicht verfügbar. Tippe die Nummer unter dem Strichcode ein.	Camera scanning isn't available here. Type the number under the barcode.
+Halte den Strichcode ins Bild.	Hold the barcode in view.
+Die Kamera ist nicht verfügbar oder nicht erlaubt. Tippe die Nummer ein.	The camera isn't available or not allowed. Type the number.
+Wdh links	Reps left
+Wdh rechts	Reps right
+Volumen kg	Volume kg
+Notiz	Note
+Menge g	Amount g
+Kohlenhydrate g	Carbs g
+Fett g	Fat g
+Datei speichern oder teilen	Save or share file
+Bereit zum Speichern oder Teilen	Ready to save or share
+Datei gespeichert	File saved
+In die Zwischenablage kopiert. Füge den Inhalt in eine Notiz-App ein.	Copied to the clipboard. Paste the content into a notes app.
+Abgebrochen	Cancelled
+Export ist hier nicht möglich	Export isn't possible here
+Diese Datei ist kein Gym-Tracker-Backup	This file is not a Gym Tracker backup
+Kein Auto-Backup gefunden	No auto backup found
+Foto gespeichert	Photo saved
+Das Foto konnte nicht gespeichert werden	The photo could not be saved
+Foto gelöscht	Photo deleted
+Löschen nicht möglich	Can't delete
+Wirklich?	Sure?
+Trag erst die Wiederholungen für links ein	Enter the reps for the left side first
+Trag erst die Wiederholungen ein	Enter the reps first
+Dropsatz: sofort weiter, ohne Pause	Drop set: go straight on, no rest
+Weiter mit	Next up:
+Gib der Vorlage einen Namen	Give the template a name
+Füge mindestens eine Übung hinzu	Add at least one exercise
+Vorlage gespeichert	Template saved
+Vorlage „	Template “
+“ gespeichert	” saved
+Check-in gespeichert	Check-in saved
+“ hinzugefügt	” added
+Gib einen Namen ein	Enter a name
+Trag Kalorien oder Makros ein	Enter calories or macros
+Gib der Übung einen Namen	Give the exercise a name
+Diese Übung gibt es schon	This exercise already exists
+Übung gespeichert	Exercise saved
+Trag ein Zielgewicht ein	Enter a goal weight
+Ziel gespeichert	Goal saved
+gibt es ab Level	is available from level
+Erinnerungen gesetzt	Reminders set
+Backup eingespielt	Backup restored
+Trag mindestens ein Maß ein	Enter at least one measurement
+Messung gespeichert	Measurement saved
+Gib dem Supplement einen Namen	Give the supplement a name
+Trag Name und Kalorien oder Makros ein	Enter a name and calories or macros
+Lebensmittel gespeichert	Food saved
+Bitte nur Ziffern eintippen.	Please enter digits only.
+Alle Übungen nutzen jetzt	All exercises now use
+Name gespeichert	Name saved
+Code kopiert	Code copied
+Markiere den Code und kopiere ihn von Hand	Select the code and copy it by hand
+Das ist kein gültiger Code	That's not a valid code
+“ ist in der Rangliste	” is on the leaderboard
+Trag ein Gewicht zwischen 20 und 400 kg ein	Enter a weight between 20 and 400 kg
+Trag ein Gewicht ein	Enter a weight
+Keine Einträge gefunden	No entries found
+“ eingetragen	” logged
+g hinzugefügt	g added
+Tausche die Übung, bevor du Sätze abgehakt hast	Swap the exercise before you check off sets
+Ausgetauscht gegen	Swapped for
+Der Link muss mit https:// beginnen	The link must start with https://
+Musik-Link gespeichert	Music link saved
+Kopieren nicht möglich, markiere den Text von Hand	Can't copy, select the text by hand
+Das ist kein gültiger Plan-Code	That's not a valid plan code
+Plan „	Plan “
+“ eingelesen	” imported
+Das Enddatum muss nach dem Start liegen	The end date must be after the start
+-Modus gestartet	mode started
+Pause beendet	Break ended
+Trag die Dauer in Minuten ein	Enter the duration in minutes
+Cardio gespeichert	Cardio saved
+Trag deine Schritte ein	Enter your steps
+Schritte gespeichert	Steps saved
+Gib einen Suchbegriff ein	Enter a search term
+Fasten beendet:	Fast ended:
+Im Vorrat	In stock
+Einkauf für	Shopping for
+Portionen)	portions)
+Liste kopiert	List copied
+Kopieren nicht möglich	Can't copy
+Mit	With
+läuft schon ein Duell	a duel is already running
+Duell mit	Duel with
+gestartet, 7 Tage	started, 7 days
+Beispieldaten entfernt	Sample data removed
+Health Connect konnte nicht geöffnet werden	Health Connect could not be opened
+Satz entfernt	Set removed
+Übung entfernt	Exercise removed
+Training verworfen	Workout discarded
+Vorlage gelöscht	Template deleted
+Training gelöscht	Workout deleted
+Mahlzeit gelöscht	Meal deleted
+Übung gelöscht	Exercise deleted
+Ziel gelöscht	Goal deleted
+Messung gelöscht	Measurement deleted
+Supplement gelöscht	Supplement deleted
+Lebensmittel gelöscht	Food deleted
+Freund entfernt	Friend removed
+Gewicht gelöscht	Weight deleted
+Cardio-Einheit gelöscht	Cardio session deleted
+Eintrag gelöscht	Entry deleted
+Meal-Prep gelöscht	Meal prep deleted
+Duell gelöscht	Duel deleted
+Rückgängig nicht möglich	Undo not possible
+Wiederhergestellt	Restored
+Pause läuft	Resting
+Danach weiter mit	Then on to
+Tippe hier, um zur App zu wechseln.	Tap here to switch to the app.
+Pausen-Timer	Rest timer
+Keine Berechtigung erteilt	No permission granted
+Health Connect ist nicht erreichbar	Health Connect can't be reached
+Tag Schritte	day of steps
+Tage Schritte	days of steps
+Gewichte	weights
+Training eingetragen	workout added
+Trainings eingetragen	workouts added
+Abgeglichen:	Synced:
+Abgeglichen, nichts Neues	Synced, nothing new
+Abgleich mit Health Connect fehlgeschlagen	Sync with Health Connect failed
+Schlaf	Sleep
+Ruhepuls	Resting heart rate
+Trainings eintragen	Add workouts
+Health Connect muss aktualisiert werden.	Health Connect needs an update.
+Health Connect ist auf diesem Handy nicht installiert.	Health Connect isn't installed on this phone.
+Damit holt die App Schritte, Gewicht, Schlaf und Ruhepuls automatisch.	With it the app fetches steps, weight, sleep and resting heart rate automatically.
+Health Connect installieren	Install Health Connect
+Verbunden	Connected
+Freigegeben:	Allowed:
+Jetzt abgleichen	Sync now
+Berechtigungen	Permissions
+Trainings in Health Connect eintragen	Add workouts to Health Connect
+Abgeschlossene Trainings erscheinen dann auch in anderen Fitness-Apps.	Finished workouts then also show up in other fitness apps.
+Letzter Abgleich:	Last sync:
+Nicht verbunden	Not connected
+Holt Schritte, Gewicht, Schlaf und Ruhepuls automatisch von deinem Handy oder deiner Uhr.	Fetches steps, weight, sleep and resting heart rate automatically from your phone or watch.
+Mit Health Connect verbinden	Connect Health Connect
+Dieser Stand lässt sich nicht lesen	This version can't be read
+Backup gefunden	Backup found
+Trainings,	workouts,
+Mahlzeiten,	meals,
+Übungen. Das ersetzt alle Daten in der App.	exercises. This replaces all data in the app.
+Daten ersetzen	Replace data
+gerade eben	just now
+Tagen	days
+Sichere deine Daten auch außerhalb des Handys	Back up your data outside your phone too
+Die letzte externe Sicherung ist	Your last external backup was
+Du hast noch nie ein Backup außerhalb der App gespeichert.	You've never saved a backup outside the app.
+Wähle nach dem Tippen Google Drive oder eine andere Cloud.	After tapping, choose Google Drive or another cloud.
+Backup sichern	Back up now
+Daten aus dem Auto-Backup wiederhergestellt	Data restored from the auto backup
+Lade deine Daten…	Loading your data…
+15 Sekunden weniger	15 seconds less
+15 Sekunden mehr	15 seconds more
+Hauptnavigation	Main navigation
+zuletzt	last
+noch	still
+von	of
+bis	to
+heute	today
+gestern	yesterday
+bei	at
+auf	on
+höher	higher
+erhöht	raised
+ergänzen.	more.
+Satztyp ändern, aktuell	Change set type, currently
+Gewicht in kg, Satz	Weight in kg, set
+Wiederholungen links, Satz	Reps left, set
+Wiederholungen rechts, Satz	Reps right, set
+Wiederholungen, Satz	Reps, set
+(inkl. Körpergewicht)	(incl. body weight)
+(du)	(you)
+. Dein Fortschritt ist messbar.	. Your progress is measurable.
+. Dieselben Muskeln wieder trainieren frühestens am	. Train the same muscles again no earlier than
+(zuletzt mindestens	(last at least
+. Die Änderung gilt gegenüber der Messung davor.	. The change is compared to the measurement before.
+(noch keins eingetragen)	(none logged yet)
+. Sie sind eine Orientierung, kein Urteil.	. They are a guide, not a verdict.
+(änderst du bei den Kraft-Standards). Taille und Hüfte nehme ich aus deinen Körpermaßen.	(change it under strength standards). Waist and hips are taken from your body measurements.
+. Punkte seit Start. Hol dir zwischendurch einen neuen Code von	. Points since start. Now and then get a new code from
+(ab Level	(from level
+Geschätztes 1RM von	Estimated 1RM of
+Kilokalorien	kilocalories
+# von #	# of #
+# von # Kilokalorien	# of # kilocalories
+vor # Std.	# h ago
+vor # Tagen	# days ago
+Satz # abhaken	Check off set #
+Level # erreicht!	Level # reached!
+# Übungen	# exercises
+# Sätze	# sets
+# Trainings	# workouts
+# Tage	# days
+# Wochen	# weeks
+Satz #	Set #
+ab #.	from #.
