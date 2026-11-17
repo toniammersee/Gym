@@ -1,6 +1,6 @@
 {
   "name": "gym-tracker",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "private": true,
   "description": "Gym Tracker: Sätze, Vorlagen, Fortschritt, Erholung und Makros",
   "dependencies": {
@@ -9,9 +9,13 @@
     "@capacitor/filesystem": "^6.0.0",
     "@capacitor/local-notifications": "^6.0.0",
     "@capacitor/share": "^6.0.0",
-    "@capacitor-mlkit/barcode-scanning": "^6.0.0"
+    "@capacitor-mlkit/barcode-scanning": "^6.0.0",
+    "gym-native": "file:plugins/gym-native"
   },
   "devDependencies": {
     "@capacitor/cli": "^6.2.0"
+  },
+  "scripts": {
+    "android": "bash scripts/prepare-android.sh"
   }
 }

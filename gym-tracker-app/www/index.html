@@ -229,6 +229,7 @@ nav>div{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(
 nav a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:8px;color:var(--muted);text-decoration:none;font-size:11px;font-weight:500;min-height:46px}
 nav a[aria-current="page"]{color:var(--accent-ink)}
 nav svg{width:22px;height:22px}
+.toast .tbtn{margin-left:14px;background:none;border:0;padding:2px 0;color:inherit;font:inherit;font-weight:700;text-decoration:underline;cursor:pointer}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:99px;font-size:13px;font-weight:500;max-width:90%;text-align:center}
 .pr{display:flex;gap:8px;align-items:center;font-size:14px}
 .week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
@@ -475,9 +476,11 @@ body.has-dock .toast{bottom:calc(190px + env(safe-area-inset-bottom,0px))}
 <div id="toast" class="toast" hidden></div>
 <nav aria-label="Hauptnavigation"><div id="nav"></div></nav>
 
+<script src="lang-en.js"></script>
 <script>
 (function(){
 'use strict';
+let LANG='de',LOC='de-DE';
 /* ---------- Helfer ---------- */
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -488,11 +491,11 @@ const parseDay=s=>{const p=s.split('-').map(Number);return new Date(p[0],p[1]-1,
 const addDays=(s,n)=>{const d=parseDay(s);d.setDate(d.getDate()+n);return ymd(d)};
 const today=()=>ymd(new Date());
 const num=v=>{const n=parseFloat(String(v==null?'':v).replace(',','.'));return isFinite(n)?n:0};
-const fmt=(n,d=0)=>Number(n).toLocaleString('de-DE',{maximumFractionDigits:d,minimumFractionDigits:0});
+const fmt=(n,d=0)=>Number(n).toLocaleString(LOC,{maximumFractionDigits:d,minimumFractionDigits:0});
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
 const WD=['So','Mo','Di','Mi','Do','Fr','Sa'];
 const MON=['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
-const dayLabel=s=>{const d=parseDay(s);return WD[d.getDay()]+', '+d.getDate()+'. '+MON[d.getMonth()]};
+const dayLabel=s=>{const d=parseDay(s);return WD[d.getDay()]+', '+d.getDate()+(LANG==='en'?' ':'. ')+MON[d.getMonth()]};
 const shortDay=s=>{const d=parseDay(s);return d.getDate()+'.'+(d.getMonth()+1)+'.'};
 const weekStart=s=>{const d=parseDay(s);d.setDate(d.getDate()-((d.getDay()+6)%7));return ymd(d)};
 const e1=(kg,r)=>r<=0?0:(r===1?kg:kg*(1+r/30));
@@ -834,7 +837,7 @@ function vTrain(){
   const wk=weekStart(today());
   const wks=state.workouts.filter(w=>w.day>=wk);
   const last=state.workouts[state.workouts.length-1];
-  let h='<h2>Training</h2>'+heroCard()+(pauseNow()?'':deloadCard())+pauseCard()+planStrip(true);
+  let h='<h2>Training</h2>'+heroCard()+(pauseNow()?'':deloadCard())+pauseCard()+backupNudge()+planStrip(true);
   h+='<section><div class="sec-h"><h3>Vorlagen</h3><button class="link" data-act="new-tpl">+ Neue Vorlage</button></div>';
   state.templates.forEach(t=>{
     const lastDone=[...state.workouts].reverse().find(w=>w.templateId===t.id);
@@ -950,7 +953,7 @@ function bodyWeightSection(){
       const rec=a.filter(x=>x.day>=addDays(last.day,-56)).map(x=>({t:parseDay(x.day).getTime(),v:x.kg})),sl=slopePerDay(rec.length>=3?rec:bw.slice(-6));
       if(sl==null)fc=' Für eine Prognose brauche ich mindestens drei Einträge über eine Woche.';
       else if((diff>0&&sl>=-0.005)||(diff<0&&sl<=0.005))fc=' Der aktuelle Trend geht noch nicht in Richtung Ziel.';
-      else{const days=Math.round(Math.abs(diff)/Math.abs(sl));fc=days>900?' Beim aktuellen Tempo dauert es mehr als zwei Jahre.':' Prognose: etwa '+new Date(Date.now()+days*864e5).toLocaleDateString('de-DE',{day:'numeric',month:'short',year:'numeric'})+' bei '+(sl>0?'+':'−')+fmt(Math.abs(sl)*7,2)+' kg pro Woche.'}
+      else{const days=Math.round(Math.abs(diff)/Math.abs(sl));fc=days>900?' Beim aktuellen Tempo dauert es mehr als zwei Jahre.':' Prognose: etwa '+new Date(Date.now()+days*864e5).toLocaleDateString(LOC,{day:'numeric',month:'short',year:'numeric'})+' bei '+(sl>0?'+':'−')+fmt(Math.abs(sl)*7,2)+' kg pro Woche.'}
     }
     h+='<p class="small muted" style="margin:0">Zielgewicht '+fmt(goal,1)+' kg: '+(Math.abs(diff)<0.3?'erreicht.':'noch '+fmt(Math.abs(diff),1)+' kg '+(diff>0?'abnehmen':'zunehmen')+'.')+fc+'</p>';
   }
@@ -1248,13 +1251,14 @@ function playSound(kind){
   }catch(e){}
 }
 async function restNotify(end){
+  restNative(end);
   const L=LN();if(!L)return;
   try{
     await L.cancel({notifications:[{id:200}]});
     if(end==null||SET().notify===false)return;
     if(restNotify.perm==null){const p=await L.requestPermissions();restNotify.perm=!!(p&&p.display==='granted')}
     if(!restNotify.perm)return;
-    await L.schedule({notifications:[{id:200,title:'Pause vorbei',body:'Weiter mit dem nächsten Satz.',schedule:{at:new Date(end),allowWhileIdle:true}}]});
+    await L.schedule({notifications:[{id:200,title:tl('Pause vorbei'),body:tl('Weiter mit dem nächsten Satz.'),schedule:{at:new Date(end),allowWhileIdle:true}}]});
   }catch(e){}
 }
 function restDone(){
@@ -1264,7 +1268,7 @@ function restDone(){
 
 function vRecovery(){
   const t=today(),ex=state.recovery.find(r=>r.day===t);
-  if(!ui.recDraft)ui.recDraft=ex?Object.assign({},ex):{day:t,sleep:7.5,quality:3,sore:2,energy:3,hr:'',kg:''};
+  if(!ui.recDraft){const hd=state.hcData||{};ui.recDraft=ex?Object.assign({},ex):{day:t,sleep:(hd.sleep&&hd.sleep[t])||7.5,quality:3,sore:2,energy:3,hr:(hd.rhr&&hd.rhr[t])||'',kg:''}}
   const d=ui.recDraft,sc=readiness(d);
   const verdict=sc>=75?['Bereit für eine harte Einheit','good']:sc>=50?['Normal trainieren, Gewichte wie geplant','warn']:['Heute locker oder Pause','bad'];
   let h='<h2>Erholung</h2><section><div class="card" style="display:flex;flex-direction:column;gap:14px"><div class="score"><div class="big" id="rscore">'+sc+'</div><div><p><span class="pill '+verdict[1]+'">'+verdict[0]+'</span></p><p class="small muted">Bereitschaft heute, 0 bis 100. Aus Schlaf, Muskelkater und Energie.</p></div></div>'+
@@ -1464,13 +1468,13 @@ function suppSection(day){
 }
 function exListHtml(q){
   q=(q||'').toLowerCase();
-  const l=state.exercises.filter(e=>!q||e.name.toLowerCase().includes(q)||(e.muscle||'').toLowerCase().includes(q)||(e.eq||'').toLowerCase().includes(q)).sort((a,b)=>(b.fav?1:0)-(a.fav?1:0)||a.name.localeCompare(b.name,'de'));
+  const l=state.exercises.filter(e=>!q||nmHit(e.name,q)||nmHit(e.muscle,q)||(e.eq||'').toLowerCase().includes(q)).sort((a,b)=>(b.fav?1:0)-(a.fav?1:0)||tl(a.name).localeCompare(tl(b.name),LANG));
   return l.length?l.map(e=>'<div class="meal"><button class="x star'+(e.fav?' on':'')+'" data-act="fav" data-id="'+esc(e.id)+'" aria-pressed="'+!!e.fav+'" aria-label="Favorit">'+(e.fav?'★':'☆')+'</button><div class="grow"><b>'+esc(e.name)+'</b><small>'+esc(e.muscle||'Sonstige')+((e.sec&&e.sec.length)?' (+'+esc(e.sec.join(', '))+')':'')+' · '+esc(e.eq||'')+(e.uni?' · einseitig':'')+'</small></div><button class="btn sm ghost" data-act="ex-info" data-id="'+esc(e.id)+'">Anleitung</button><button class="btn sm ghost" data-act="ex-edit" data-id="'+esc(e.id)+'">Bearbeiten</button></div>').join(''):'<p class="empty">Keine Treffer.</p>';
 }
 function exUsed(id){return state.workouts.some(w=>w.exercises.some(e=>e.exId===id))||state.templates.some(t=>t.exercises.some(e=>e.exId===id))||state.targets.some(t=>t.exId===id)}
 function foodsListHtml(q){
   q=(q||'').toLowerCase();
-  const l=state.foods.filter(f=>!q||f.name.toLowerCase().includes(q)).sort((a,b)=>a.name.localeCompare(b.name,'de'));
+  const l=state.foods.filter(f=>!q||nmHit(f.name,q)).sort((a,b)=>tl(a.name).localeCompare(tl(b.name),LANG));
   return l.length?l.map(f=>'<div class="meal"><div><b>'+esc(f.name)+'</b><small>'+fmt(f.kcal)+' kcal · P '+fmt(f.p,1)+' · K '+fmt(f.c,1)+' · F '+fmt(f.f,1)+' pro 100 g</small></div><button class="x" data-act="foods-del" data-id="'+esc(f.id)+'" aria-label="Löschen">×</button></div>').join(''):'<p class="empty">Keine Treffer.</p>';
 }
 function calcOut(d){
@@ -1571,8 +1575,8 @@ function nutriSection(){
 }
 function recordsHtml(q,sort){
   q=(q||'').toLowerCase();
-  const rows=Object.keys(exCounts()).map(id=>{const ss=sessionsFor(id),b=ss.reduce((m,x)=>x.e1>m.e1?x:m,ss[0]);return{id:id,ex:exById(id),b:b,n:ss.length,top:Math.max(...ss.map(x=>x.top))}}).filter(r=>!q||r.ex.name.toLowerCase().includes(q)||(r.ex.muscle||'').toLowerCase().includes(q));
-  rows.sort((a,b)=>sort==='name'?a.ex.name.localeCompare(b.ex.name,'de'):sort==='orm'?b.b.e1-a.b.e1:(b.b.w.day<a.b.w.day?-1:b.b.w.day>a.b.w.day?1:0));
+  const rows=Object.keys(exCounts()).map(id=>{const ss=sessionsFor(id),b=ss.reduce((m,x)=>x.e1>m.e1?x:m,ss[0]);return{id:id,ex:exById(id),b:b,n:ss.length,top:Math.max(...ss.map(x=>x.top))}}).filter(r=>!q||nmHit(r.ex.name,q)||(r.ex.muscle||'').toLowerCase().includes(q));
+  rows.sort((a,b)=>sort==='name'?tl(a.ex.name).localeCompare(tl(b.ex.name),LANG):sort==='orm'?b.b.e1-a.b.e1:(b.b.w.day<a.b.w.day?-1:b.b.w.day>a.b.w.day?1:0));
   return rows.length?rows.map(r=>'<div class="meal"><div class="grow"><b>'+esc(r.ex.name)+'</b><small>'+esc(r.ex.muscle||'')+' · '+r.n+' Trainings · '+dayLabel(r.b.w.day)+'</small></div><div class="r"><b>'+(isBW(r.id)?'+':'')+fmt(r.b.best.kg,2)+' × '+repTxt(r.b.best)+'</b><small>≈ '+fmt(r.b.e1,1)+' kg 1RM</small></div></div>').join(''):'<p class="empty">Keine Treffer.</p>';
 }
 function reportHtml(d){
@@ -1654,7 +1658,7 @@ function infoSheet(d){
 }
 function libListHtml(q){
   q=(q||'').toLowerCase();
-  const l=state.exercises.filter(e=>!q||e.name.toLowerCase().includes(q)||(e.muscle||'').toLowerCase().includes(q)).sort((a,b)=>(a.muscle||'').localeCompare(b.muscle||'','de')||a.name.localeCompare(b.name,'de'));
+  const l=state.exercises.filter(e=>!q||nmHit(e.name,q)||nmHit(e.muscle,q)).sort((a,b)=>(a.muscle||'').localeCompare(b.muscle||'','de')||tl(a.name).localeCompare(tl(b.name),LANG));
   return l.length?l.map(e=>'<button class="meal" style="width:100%;text-align:left;background:none;border:0;color:inherit" data-act="ex-info" data-id="'+esc(e.id)+'"><div class="grow"><b>'+esc(e.name)+'</b><small>'+esc(e.muscle||'Sonstige')+' · '+esc(e.eq||'')+'</small></div><span aria-hidden="true">›</span></button>').join(''):'<p class="empty">Keine Treffer.</p>';
 }
 
@@ -1769,7 +1773,7 @@ function swapHtml(d){
   const a=state.active;
   if(!a||!a.exercises[d.i])return hdr('Austauschen')+'<p class="empty">Kein aktives Training.</p>';
   const cur=exById(a.exercises[d.i].exId),inW=a.exercises.map(e=>e.exId);
-  const alts=state.exercises.filter(e=>e.id!==cur.id&&!inW.includes(e.id)&&e.muscle===cur.muscle&&gearOk(e)).sort((x,y)=>((y.eq===cur.eq)-(x.eq===cur.eq))||((y.fav?1:0)-(x.fav?1:0))||x.name.localeCompare(y.name,'de'));
+  const alts=state.exercises.filter(e=>e.id!==cur.id&&!inW.includes(e.id)&&e.muscle===cur.muscle&&gearOk(e)).sort((x,y)=>((y.eq===cur.eq)-(x.eq===cur.eq))||((y.fav?1:0)-(x.fav?1:0))||tl(x.name).localeCompare(tl(y.name),LANG));
   return hdr('Ersatz für '+esc(cur.name))+'<p class="small muted" style="margin:0">Gleicher Hauptmuskel ('+esc(cur.muscle||'–')+'). Oben stehen Übungen mit dem gleichen Gerät.</p>'+
     (alts.length?'<div class="card">'+alts.slice(0,30).map(e=>'<button class="meal" style="width:100%;text-align:left;background:none;border:0;color:inherit" data-act="swap-pick" data-id="'+esc(e.id)+'"><div class="grow"><b>'+esc(e.name)+'</b><small>'+esc(e.eq||'')+(e.uni?' · einseitig':'')+'</small></div><span aria-hidden="true">›</span></button>').join('')+'</div>':'<p class="empty">Keine passende Übung gefunden. Prüfe dein Equipment in den Einstellungen.</p>');
 }
@@ -1838,7 +1842,7 @@ const CARDIO=['Laufen','Radfahren','Schwimmen','Rudern','Gehen/Wandern','Crosstr
 function activitySection(){
   const cs=state.cardio||[],ss=state.steps||{},g=state.settings.stepGoal||8000,t=today();
   let h='<section><div class="sec-h"><h3>Cardio und Schritte</h3><span><button class="link" data-act="cardio-open">+ Cardio</button> <button class="link" data-act="steps-open">+ Schritte</button></span></div>';
-  if(!cs.length&&!Object.keys(ss).length)return h+'<p class="empty">Trag Läufe, Radfahrten oder deine Schritte ein. Die Schritte trägst du von Hand ein, ein automatischer Abgleich mit dem Handy ist nicht möglich.</p></section>';
+  if(!cs.length&&!Object.keys(ss).length)return h+'<p class="empty">Trag Läufe, Radfahrten oder deine Schritte ein. '+(GN()?'Die Schritte kommen automatisch, wenn du in den Einstellungen Health Connect verbindest.':'Die Schritte trägst du von Hand ein.')+'</p></section>';
   if(cs.length){
     const wk=[];for(let i=7;i>=0;i--){const w=addDays(weekStart(t),-7*i),d=parseDay(w);wk.push({label:d.getDate()+'.'+(d.getMonth()+1)+'.',v:cs.filter(c=>weekStart(c.day)===w).reduce((a,c)=>a+c.min,0),dim:i===0})}
     h+='<div class="card"><div class="label" style="margin-bottom:6px">Cardio pro Woche (Minuten)</div>'+barChart(wk,{fmtV:v=>fmt(v,0),h:130,label:'Cardio Minuten pro Woche'})+'</div>'+
@@ -1883,7 +1887,7 @@ function fastCard(){
   let h='<section><div class="sec-h"><h3>Fasten</h3><small>Intervall-Timer</small></div><div class="card" style="display:flex;flex-direction:column;gap:10px">';
   if(run){
     const hh=Math.floor(el),mm=Math.floor((el-hh)*60);
-    h+='<div class="stats"><div class="stat"><b>'+hh+':'+pad(mm)+'</b><span>von '+goal+' Stunden</span></div><div class="stat"><b>'+new Date(f.start).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})+'</b><span>gestartet</span></div></div><div class="track"><i style="width:'+clamp(el/goal*100,0,100)+'%"></i></div>'+
+    h+='<div class="stats"><div class="stat"><b>'+hh+':'+pad(mm)+'</b><span>von '+goal+' Stunden</span></div><div class="stat"><b>'+new Date(f.start).toLocaleTimeString(LOC,{hour:'2-digit',minute:'2-digit'})+'</b><span>gestartet</span></div></div><div class="track"><i style="width:'+clamp(el/goal*100,0,100)+'%"></i></div>'+
       (el>=goal?'<p class="small" style="margin:0"><b>Ziel erreicht.</b> Du kannst jetzt essen.</p>':'<p class="small muted" style="margin:0">Noch '+fmt(goal-el,1)+' Stunden.</p>')+'<button class="btn primary" data-act="fast-stop">Fasten beenden</button>';
   }else{
     h+='<div class="chips">'+[12,14,16,18,20,24].map(g=>'<button class="chip" data-act="fast-goal" data-g="'+g+'" aria-pressed="'+(g===goal)+'">'+g+' h</button>').join('')+'</div><button class="btn primary" data-act="fast-start">Fasten starten ('+goal+' h)</button>';
@@ -1901,7 +1905,7 @@ function caffCard(){
   const tod=(state.caff||[]).filter(x=>x.t>=d0.getTime()),sum=tod.reduce((a,x)=>a+x.mg,0);
   let clear=null;for(let m=0;m<=144;m++){const at=now+m*15*6e4;if(caffLeft(at)<25){clear=at;break}}
   const bed=(state.settings.bed||'23:00'),bp=bed.split(':'),b=new Date();b.setHours(+bp[0]||23,+bp[1]||0,0,0);if(b.getTime()<now)b.setDate(b.getDate()+1);
-  const atBed=caffLeft(b.getTime()),tm=t=>new Date(t).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'});
+  const atBed=caffLeft(b.getTime()),tm=t=>new Date(t).toLocaleTimeString(LOC,{hour:'2-digit',minute:'2-digit'});
   let h='<section><div class="sec-h"><h3>Koffein</h3><small>Halbwertszeit etwa 5 Stunden</small></div><div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="chips wrap">'+CAFF.map(c=>'<button class="chip" data-act="caff-add" data-mg="'+c[1]+'" data-n="'+esc(c[0])+'">'+c[0]+' · '+c[1]+' mg</button>').join('')+'</div>'+
     '<div class="stats"><div class="stat"><b>'+fmt(left,0)+'</b><span>mg aktiv jetzt</span></div><div class="stat"><b>'+fmt(sum,0)+'</b><span>mg heute (Richtwert max. 400)</span></div></div>';
   if(left>=25&&clear)h+='<p class="small muted" style="margin:0">Unter 25 mg ab etwa '+tm(clear)+' Uhr.</p>';
@@ -2077,6 +2081,13 @@ function sheetMore(s){
       '<div class="g2"><label class="field"><span>Gewicht (kg)</span><input class="in l" inputmode="decimal" data-d="kg" value="'+esc(d.kg)+'"></label><label class="field"><span>Wiederholungen</span><input class="in l" inputmode="numeric" data-d="reps" value="'+esc(d.reps)+'"></label></div>')+
       '<div id="calcout">'+calcOut(d)+'</div>';
   }
+  if(s.type==='backups'){
+    const im=ui.importData;
+    return hdr('Ältere Stände')+importCard(im)+
+      (s.err?'<p class="empty">Der Ordner Dokumente/GymTracker/Verlauf ist nicht lesbar.</p>':!s.list?'<p class="empty">Lädt…</p>':!s.list.length?'<p class="empty">Noch keine älteren Stände. Die App legt jeden Tag einen an.</p>':
+      '<div class="card">'+s.list.map(f=>'<div class="meal"><div class="grow"><b>'+dayLabel(f.day)+'</b><small>'+(f.size>=1024?fmt(f.size/1024,0)+' KB':'')+'</small></div><button class="btn sm" data-act="backup-load" data-n="'+esc(f.name)+'">Ansehen</button></div>').join('')+'</div>')+
+      '<p class="small muted" style="margin:0">Die App speichert jeden Tag einen Stand im Ordner Dokumente/GymTracker/Verlauf und hebt die letzten '+BK_KEEP+' Tage auf.</p>';
+  }
   if(s.type==='settings'){
     const demo=state.workouts.some(w=>w.demo)||state.meals.some(m=>m.demo)||state.recovery.some(r=>r.demo)||state.measures.some(m=>m.demo);
     const im=ui.importData,F=CAP()&&CAP().Filesystem,st=SET();
@@ -2085,14 +2096,17 @@ function sheetMore(s){
       '<section><div class="label">Pausen</div><div class="card stack"><div><b>Standard-Pause</b><small class="muted" style="display:block">Gilt für alle Übungen ohne eigene Pause.</small></div>'+restPicker(state.rest,'global')+
         '<button class="btn sm" data-act="rest-all">Auf alle Übungen anwenden</button>'+sw('remember','Pause pro Übung merken','Eine geänderte Pause gilt beim nächsten Mal wieder.')+'</div></section>'+
       '<section><div class="label">Signal bei Pausenende</div><div class="card stack"><div class="seg" role="group" aria-label="Ton">'+SOUNDS.map(m=>'<button data-act="set-sound" data-v="'+m[0]+'" aria-pressed="'+(st.sound===m[0])+'">'+m[1]+'</button>').join('')+'</div>'+
-        '<button class="btn sm" data-act="snd-test">Ton testen</button>'+sw('vib','Vibration')+sw('notify','Benachrichtigung',LN()?'Meldet sich auch bei gesperrtem Bildschirm oder wenn die App im Hintergrund ist.':'Funktioniert nur in der installierten Android-App.')+'</div></section>'+
+        '<button class="btn sm" data-act="snd-test">Ton testen</button>'+sw('vib','Vibration')+sw('notify','Benachrichtigung',LN()?'Meldet sich auch bei gesperrtem Bildschirm oder wenn die App im Hintergrund ist.':'Funktioniert nur in der installierten Android-App.')+(GN()?sw('lockTimer','Timer im Sperrbildschirm','Zeigt die laufende Pause mit Countdown in den Benachrichtigungen und auf dem Sperrbildschirm.'):'')+'</div></section>'+
+      '<section><div class="label">Sprache</div><div class="seg" role="group" aria-label="Sprache">'+[['de','Deutsch'],['en','English']].map(m=>'<button data-act="set-lang" data-v="'+m[0]+'" aria-pressed="'+(LANG===m[0])+'" data-notr="1">'+m[1]+'</button>').join('')+'</div></section>'+
+      hcSection(sw)+
       '<section><div class="label">Level und Vergleich</div><div class="row"><button class="btn grow" data-act="rank-open">Name, Code und Freunde</button></div></section>'+
       '<section><div class="label">Planung und Listen</div><div class="row"><button class="btn grow" data-act="plan-open">Wochenplan und Erinnerung</button></div><div class="row"><button class="btn grow" data-act="exlist-open">Übungen</button><button class="btn grow" data-act="foods-open">Lebensmittel</button><button class="btn grow" data-act="supps-open">Supplements</button></div><div class="row"><button class="btn grow" data-act="gear-open">Equipment</button><button class="btn grow" data-act="tplimp-open">Plan einlesen</button><button class="btn grow" data-act="music-open">Musik-Link</button></div></section>'+
       '<section><div class="label">Aussehen</div><div class="seg" role="group" aria-label="Darstellung">'+[['system','System'],['light','Hell'],['dark','Dunkel']].map(m=>'<button data-act="set-mode" data-v="'+m[0]+'" aria-pressed="'+((st.mode||'system')===m[0])+'">'+m[1]+'</button>').join('')+'</div><div class="row" role="group" aria-label="Farbe">'+ACCENTS.map(a=>{const need=a[3]||1,lk=need>xpInfo().lv;return'<button class="sw" data-act="set-accent" data-v="'+a[0]+'" style="background:'+a[2]+(lk?';opacity:.3':'')+'" aria-label="'+a[1]+(lk?' (ab Level '+need+')':'')+'" aria-pressed="'+((st.accent||'lav')===a[0])+'"></button>'}).join('')+'</div></section>'+
       '<section><div class="label">Daten sichern</div><div class="row"><button class="btn grow" data-act="export" data-k="json">Backup speichern</button></div><div class="row"><button class="btn grow" data-act="export" data-k="csv">Trainings (CSV)</button><button class="btn grow" data-act="export" data-k="meals">Essen (CSV)</button></div><div class="row"><button class="btn grow" data-act="export" data-k="body">Körper (CSV)</button><button class="btn grow" data-act="export" data-k="bests">Bestwerte (CSV)</button></div>'+
       '<label class="btn block" for="impfile" style="text-align:center">Backup einlesen</label><input type="file" id="impfile" accept=".json,application/json" hidden>'+
-      (F?'<p class="small muted" style="margin:0">Auto-Backup: '+(ui.autoErr?'nicht möglich, der Zugriff auf Dokumente fehlt. Nutze „Backup speichern“.':(ui.lastAuto?'zuletzt um '+new Date(ui.lastAuto).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})+' Uhr im Ordner Dokumente/GymTracker.':'Die App legt nach jeder Änderung eine Datei im Ordner Dokumente/GymTracker ab.'))+'</p><button class="btn block" data-act="auto-restore">Auto-Backup einlesen</button>':'')+
-      (im?'<div class="card" style="display:flex;flex-direction:column;gap:8px"><b>Backup gefunden</b><span class="small muted">'+im.workouts.length+' Trainings, '+im.meals.length+' Mahlzeiten, '+im.exercises.length+' Übungen. Das ersetzt alle Daten in der App.</span><button class="btn danger" data-act="import-apply" data-confirm="1">Daten ersetzen</button></div>':'')+
+      (F?'<p class="small muted" style="margin:0">Auto-Backup: '+(ui.autoErr?'nicht möglich, der Zugriff auf Dokumente fehlt. Nutze „Backup speichern“.':(ui.lastAuto?'zuletzt um '+new Date(ui.lastAuto).toLocaleTimeString(LOC,{hour:'2-digit',minute:'2-digit'})+' Uhr im Ordner Dokumente/GymTracker.':'Die App legt nach jeder Änderung eine Datei im Ordner Dokumente/GymTracker ab.'))+' Zusätzlich hebt sie den Stand der letzten '+BK_KEEP+' Tage auf.</p><div class="row"><button class="btn grow" data-act="auto-restore">Auto-Backup einlesen</button><button class="btn grow" data-act="backups-open">Ältere Stände</button></div>':'')+
+      '<p class="small muted" style="margin:0">'+(st.lastExport?'Letzte Sicherung außerhalb der App: '+agoTxt(st.lastExport)+'.':'Noch keine Sicherung außerhalb der App.')+' Tippe auf „Backup speichern“ und wähle Google Drive, dann sind deine Daten auch sicher, wenn das Handy verloren geht.</p>'+
+      importCard(im)+
       '<p class="small muted" style="margin:0">Alle Eingaben werden sofort automatisch gespeichert. Ein Backup schützt zusätzlich, wenn die App deinstalliert wird. Fotos sind nicht im Backup.</p></section>'+
       (demo?'<section><button class="btn danger" data-act="demo-remove" data-confirm="1">Beispieldaten entfernen</button></section>':'')+
       '<p class="small muted" style="margin:0">Gym Tracker</p>';
@@ -2120,7 +2134,7 @@ function sheetMore(s){
       (d.id&&used?'<p class="small muted" style="margin:0">Diese Übung ist in Trainings, Vorlagen oder Zielen im Einsatz und lässt sich deshalb nicht löschen.</p>':'');
   }
   if(s.type==='goal'){
-    const counts=exCounts(),ex=[...state.exercises].sort((a,b)=>(counts[b.id]||0)-(counts[a.id]||0)||a.name.localeCompare(b.name,'de'));
+    const counts=exCounts(),ex=[...state.exercises].sort((a,b)=>(counts[b.id]||0)-(counts[a.id]||0)||tl(a.name).localeCompare(tl(b.name),LANG));
     return hdr('Neues Ziel')+'<label class="field"><span>Übung</span><select class="sel" data-d="exId">'+ex.map(e=>'<option value="'+esc(e.id)+'"'+(e.id===d.exId?' selected':'')+'>'+esc(e.name)+'</option>').join('')+'</select></label>'+
       '<label class="field"><span>Zielgewicht (geschätztes 1RM in kg)</span><input class="in l" inputmode="decimal" data-d="kg" value="'+esc(d.kg)+'" placeholder="z. B. 100"></label><button class="btn primary" data-act="goal-save">Ziel speichern</button>';
   }
@@ -2181,9 +2195,9 @@ function sheetHtml(){
 }
 function pickerList(){
   const q=(ui.picker.q||'').trim().toLowerCase();
-  const list=state.exercises.filter(e=>gearOk(e)&&(!q||e.name.toLowerCase().includes(q)));
+  const list=state.exercises.filter(e=>gearOk(e)&&(!q||nmHit(e.name,q)));
   const exact=state.exercises.some(e=>e.name.toLowerCase()===q);
-  const byName=(a,b)=>a.name.localeCompare(b.name,'de');
+  const byName=(a,b)=>tl(a.name).localeCompare(tl(b.name),LANG);
   const item=e=>'<div class="pitem2"><button class="pbtn" data-act="pick-ex" data-id="'+esc(e.id)+'"><span>'+esc(e.name)+'</span><small>'+esc(e.eq||'')+'</small></button><button class="x star'+(e.fav?' on':'')+'" data-act="fav" data-id="'+esc(e.id)+'" aria-pressed="'+!!e.fav+'" aria-label="Favorit">'+(e.fav?'★':'☆')+'</button></div>';
   let h='';
   if(!q){const f=list.filter(e=>e.fav);if(f.length)h+='<div class="pgroup"><div class="label">Favoriten</div>'+f.sort(byName).map(item).join('')+'</div>'}
@@ -2196,7 +2210,7 @@ function pickerList(){
 }
 function foodPickerList(){
   const q=(ui.picker.q||'').trim().toLowerCase();
-  const l=state.foods.filter(f=>!q||f.name.toLowerCase().includes(q)).sort((a,b)=>a.name.localeCompare(b.name,'de'));
+  const l=state.foods.filter(f=>!q||nmHit(f.name,q)).sort((a,b)=>tl(a.name).localeCompare(tl(b.name),LANG));
   return l.length?l.map(f=>'<button class="pitem" data-act="pick-food" data-id="'+esc(f.id)+'"><span>'+esc(f.name)+'</span><small>'+fmt(f.kcal)+' kcal / 100 g</small></button>').join(''):'<p class="empty">Nichts gefunden. Lege das Lebensmittel unter „Lebensmittel“ an oder scanne den Barcode.</p>';
 }
 function pickerHtml(){
@@ -2238,7 +2252,11 @@ function renderSheets(){
   const lock=!!(ui.sheet||ui.picker);
   if(lock!==renderSheets.lock){renderSheets.lock=lock;const y=window.scrollY;document.documentElement.style.overflow=lock?'hidden':'';window.scrollTo(0,y)}
 }
-function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>{t.hidden=true},3000)}
+function toast(m,undo){
+  const t=$('#toast');t.textContent=m;
+  if(undo){const b=document.createElement('button');b.className='tbtn';b.dataset.act='undo';b.textContent='Rückgängig';t.appendChild(b)}
+  t.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>{t.hidden=true;if(undo)ui.undo=null},undo?7000:3000);
+}
 
 /* ---------- Training-Logik ---------- */
 async function wake(on){
@@ -2280,6 +2298,7 @@ function finishWorkout(){
   state.workouts.push(w);state.workouts.sort((x,y)=>x.start-y.start);
   state.active=null;save();wake(false);hideRest();
   ui.sheet={type:'summary',w:w,prs:prs,fresh:true};render();
+  hcSync({force:true});
   const lv1=xpInfo().lv;if(lv1>lv0){const nw=ACCENTS.filter(a=>(a[3]||1)>lv0&&(a[3]||1)<=lv1).map(a=>a[1]);toast('Level '+lv1+' erreicht!'+(nw.length?' Neue Farbe: '+nw.join(', '):''))}
 }
 /* Pausen-Timer */
@@ -2338,10 +2357,10 @@ async function scheduleReminders(){
     if(!r.on&&!exOn.length)return true;
     const perm=await L.requestPermissions();
     if(!perm||perm.display!=='granted'){toast('Benachrichtigungen sind nicht erlaubt');return false}
-    exOn.forEach((q,i)=>{const t=(ex[q[0]].t||q[2]).split(':'),sch={hour:+t[0]||0,minute:+t[1]||0};if(q[0]==='weigh')sch.weekday=1;list.push({id:110+REM.indexOf(q),title:'Gym Tracker',body:q[3],schedule:{on:sch}})});
+    exOn.forEach((q,i)=>{const t=(ex[q[0]].t||q[2]).split(':'),sch={hour:+t[0]||0,minute:+t[1]||0};if(q[0]==='weigh')sch.weekday=1;list.push({id:110+REM.indexOf(q),title:'Gym Tracker',body:tl(q[3]),schedule:{on:sch}})});
     if(r.on&&!pauseNow())[0,1,2,3,4,5,6].forEach(dow=>{
       const t=state.templates.find(x=>x.id===state.plan[dow]);if(!t)return;
-      list.push({id:100+dow,title:'Gym Tracker',body:'Heute steht '+t.name+' an.',schedule:{on:{weekday:dow+1,hour:r.hour,minute:r.minute}}});
+      list.push({id:100+dow,title:'Gym Tracker',body:LANG==='en'?'Today: '+tl(t.name)+'.':'Heute steht '+t.name+' an.',schedule:{on:{weekday:dow+1,hour:r.hour,minute:r.minute}}});
     });
     if(list.length)await L.schedule({notifications:list});
     return true;
@@ -2424,6 +2443,7 @@ async function doExport(kind){
   else if(kind==='year'){name='gym-tracker-jahr-'+ui.sheet.draft.y+'.txt';text=yearText(ui.sheet.draft.y)}
   else{name='gym-tracker-essen-'+day+'.csv';text=buildMealsCsv()}
   const r=await deliver(name,text);
+  if(kind==='json'&&(r==='shared'||r==='saved')){state.settings.lastExport=Date.now();save()}
   toast({shared:'Bereit zum Speichern oder Teilen',saved:'Datei gespeichert',copied:'In die Zwischenablage kopiert. Füge den Inhalt in eine Notiz-App ein.',cancel:'Abgebrochen',fail:'Export ist hier nicht möglich'}[r]||'Fertig');
 }
 function handleImport(file){
@@ -2447,8 +2467,10 @@ async function autoBackup(){
   const F=CAP()&&CAP().Filesystem;if(!F||!state)return;
   try{
     if(!autoBackup.perm){autoBackup.perm=true;try{await F.requestPermissions()}catch(e){}}
-    await F.writeFile({path:BK_PATH,data:JSON.stringify({app:'gym-tracker',version:1,exported:new Date().toISOString(),state:state}),directory:'DOCUMENTS',encoding:'utf8',recursive:true});
+    const data=JSON.stringify({app:'gym-tracker',version:1,exported:new Date().toISOString(),state:state});
+    await F.writeFile({path:BK_PATH,data:data,directory:'DOCUMENTS',encoding:'utf8',recursive:true});
     ui.lastAuto=Date.now();ui.autoErr=false;
+    try{await F.writeFile({path:BK_DIR+'/backup-'+today()+'.json',data:data,directory:'DOCUMENTS',encoding:'utf8',recursive:true});if(!autoBackup.pruned){autoBackup.pruned=true;await pruneBackups(F)}}catch(e){}
   }catch(e){ui.autoErr=true}
 }
 async function readAuto(){
@@ -2517,7 +2539,9 @@ document.addEventListener('click',function(ev){
     armed.key=null;clearTimeout(armed.t);
   }
   const A=state&&state.active,i=+el.dataset.i;
+  const undoSnap=UNDO_ACTS[act]&&state?JSON.stringify(state):null;
   switch(act){
+    case'undo':undoLast();break;
     case'start-tpl':startWorkout(state.templates.find(t=>t.id===el.dataset.id));break;
     case'start-free':startWorkout(null);break;
     case'new-tpl':openTpl(null);break;
@@ -2771,7 +2795,15 @@ document.addEventListener('click',function(ev){
     case'demo-remove':
       state.workouts=state.workouts.filter(w=>!w.demo);state.meals=state.meals.filter(m=>!m.demo);state.recovery=state.recovery.filter(r=>!r.demo);state.measures=state.measures.filter(m=>!m.demo);
       ui.recDraft=null;save();render();toast('Beispieldaten entfernt');break;
+    case'set-lang':state.settings.lang=el.dataset.v;save();setTimeout(()=>location.reload(),50);break;
+    case'hc-connect':hcConnect();break;
+    case'hc-sync':hcSync({manual:true});break;
+    case'hc-settings':{const G=GN();if(G)G.hcSettings().catch(()=>toast('Health Connect konnte nicht geöffnet werden'));break}
+    case'backups-open':openBackups();break;
+    case'backup-load':loadBackup(el.dataset.n);break;
+    case'nudge-later':state.settings.nudgeSnooze=Date.now()+14*864e5;save();render();break;
   }
+  if(undoSnap&&JSON.stringify(state)!==undoSnap)offerUndo(UNDO_ACTS[act],undoSnap);
 });
 document.addEventListener('input',function(ev){
   const t=ev.target;
@@ -2859,12 +2891,207 @@ document.addEventListener('touchend',e=>{
   if(j<0||j>=TABS.length)return;
   ui.slide=dx<0?'l':'r';location.hash=TABS[j][0];
 },{passive:true});
-document.addEventListener('visibilitychange',()=>{if(!document.hidden&&state&&state.active)wake(true);tick()});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&state&&state.active)wake(true);tick();if(!document.hidden&&state)hcRefresh().then(()=>hcSync({}))});
 
+/* ---------- Rückgängig ---------- */
+const UNDO_ACTS={'rm-set':'Satz entfernt','rm-ex':'Übung entfernt','cancel-workout':'Training verworfen','del-tpl':'Vorlage gelöscht','del-wk':'Training gelöscht','food-del':'Mahlzeit gelöscht','ex-del':'Übung gelöscht','goal-del':'Ziel gelöscht','meas-del':'Messung gelöscht','supp-del':'Supplement gelöscht','foods-del':'Lebensmittel gelöscht','friend-del':'Freund entfernt','bw-del':'Gewicht gelöscht','mtpl-del':'Vorlage gelöscht','cardio-del':'Cardio-Einheit gelöscht','caff-del':'Eintrag gelöscht','alc-del':'Eintrag gelöscht','prep-del':'Meal-Prep gelöscht','duel-del':'Duell gelöscht','demo-remove':'Beispieldaten entfernt','import-apply':'Backup eingespielt'};
+function offerUndo(msg,snap){ui.undo={snap:snap};toast(msg,true)}
+function undoLast(){
+  const u=ui.undo;if(!u)return;ui.undo=null;
+  try{state=Object.assign(defaultState(),JSON.parse(u.snap))}catch(e){toast('Rückgängig nicht möglich');return}
+  ui.recDraft=null;save();applyTheme();
+  if(state.active)wake(true);
+  render();toast('Wiederhergestellt');
+}
+
+/* ---------- Pausen-Timer im Sperrbildschirm ---------- */
+const GN=()=>{const c=CAP();return c&&c.GymNative};
+async function restNative(end){
+  const G=GN();if(!G)return;
+  try{
+    if(end==null||SET().lockTimer===false){await G.restStop();return}
+    const ex=ui.rest&&ui.rest.exId?tl(exById(ui.rest.exId).name):'';
+    await G.restStart({end:end,title:tl('Pause läuft'),body:ex?tl('Danach weiter mit')+' '+ex:tl('Tippe hier, um zur App zu wechseln.'),channel:tl('Pausen-Timer')});
+  }catch(e){}
+}
+
+/* ---------- Health Connect ---------- */
+const HC={status:null,granted:{},busy:false,last:0};
+async function hcRefresh(){
+  const G=GN();if(!G)return;
+  try{const r=await G.hcStatus();HC.status=r.status;HC.granted=r.granted||{}}catch(e){HC.status='error'}
+}
+async function hcConnect(){
+  const G=GN();if(!G)return;
+  await hcRefresh();
+  if(HC.status==='unavailable'||HC.status==='update'){try{await G.hcInstall()}catch(e){}return}
+  try{
+    const r=await G.hcRequest();HC.granted=r.granted||{};
+    if(!Object.values(HC.granted).some(Boolean)){toast('Keine Berechtigung erteilt');renderSheets();return}
+    state.settings.hc=true;if(!state.settings.hcSince)state.settings.hcSince=Date.now();save();
+    await hcSync({manual:true});
+  }catch(e){toast('Health Connect ist nicht erreichbar')}
+  renderSheets();
+}
+async function hcSync(o){
+  o=o||{};
+  const G=GN();if(!G||!state||!state.settings.hc||HC.busy)return;
+  if(!o.manual&&!o.force&&Date.now()-HC.last<20*60000)return;
+  HC.busy=true;
+  try{
+    const r=await G.hcRead({days:o.manual?30:14});
+    HC.granted=r.granted||HC.granted;HC.status='available';
+    const t=today();let nSteps=0,nKg=0,nW=0;
+    state.steps=state.steps||{};
+    Object.keys(r.steps||{}).forEach(d=>{const n=Math.round(r.steps[d]);if(n>(state.steps[d]||0)){state.steps[d]=n;nSteps++}});
+    state.bw=state.bw||[];
+    Object.keys(r.weight||{}).forEach(d=>{const kg=Math.round(r.weight[d]*10)/10;if(kg>=20&&kg<=400&&!state.bw.some(x=>x.day===d)&&!state.recovery.some(x=>x.day===d&&x.kg>0)){state.bw.push({day:d,kg:kg,hc:1});nKg++}});
+    state.bw.sort((a,b)=>a.day<b.day?-1:1);
+    state.hcData={sleep:r.sleep||{},rhr:r.rhr||{}};
+    const d=ui.recDraft;
+    if(d&&d.day===t&&!state.recovery.some(x=>x.day===t)){if(r.sleep&&r.sleep[t])d.sleep=r.sleep[t];if(r.rhr&&r.rhr[t]&&!d.hr)d.hr=r.rhr[t]}
+    if(state.settings.hcWrite!==false&&HC.granted.workouts){
+      const since=state.settings.hcSince||Date.now(),list=state.workouts.filter(w=>!w.hc&&!w.demo&&(w.end||w.start)>=since-864e5);
+      if(list.length){
+        const res=await G.hcWriteWorkouts({workouts:list.map(w=>({id:w.id,start:w.start,end:w.end||w.start+36e5,title:tl(w.name)||'Training',notes:w.note||''}))});
+        nW=res.written||0;list.forEach(w=>{w.hc=1});
+      }
+    }
+    HC.last=Date.now();state.settings.hcLast=HC.last;save();
+    const act=document.activeElement;
+    if(!(act&&/INPUT|TEXTAREA|SELECT/.test(act.tagName)))render();else renderSheets();
+    if(o.manual){
+      const parts=[];if(nSteps)parts.push(nSteps+' '+(nSteps===1?'Tag Schritte':'Tage Schritte'));if(nKg)parts.push(nKg+' '+(nKg===1?'Gewicht':'Gewichte'));if(nW)parts.push(nW+' '+(nW===1?'Training eingetragen':'Trainings eingetragen'));
+      toast(parts.length?'Abgeglichen: '+parts.join(', '):'Abgeglichen, nichts Neues');
+    }
+  }catch(e){if(o.manual)toast('Abgleich mit Health Connect fehlgeschlagen')}
+  HC.busy=false;
+}
+function hcSection(sw){
+  if(!GN())return'';
+  const on=state.settings.hc,g=HC.granted||{};
+  const names=[['steps','Schritte'],['weight','Gewicht'],['sleep','Schlaf'],['rhr','Ruhepuls'],['workouts','Trainings eintragen']].filter(x=>g[x[0]]).map(x=>x[1]);
+  let h='<section><div class="label">Health Connect</div><div class="card stack">';
+  if(HC.status==='unavailable'||HC.status==='update'){
+    h+='<p class="small muted" style="margin:0">'+(HC.status==='update'?'Health Connect muss aktualisiert werden.':'Health Connect ist auf diesem Handy nicht installiert.')+' Damit holt die App Schritte, Gewicht, Schlaf und Ruhepuls automatisch.</p><button class="btn" data-act="hc-connect">Health Connect installieren</button>';
+  }else if(on&&names.length){
+    h+='<div><b>Verbunden</b><small class="muted" style="display:block">Freigegeben: '+names.join(', ')+'.</small></div>'+
+      '<div class="row"><button class="btn grow" data-act="hc-sync">Jetzt abgleichen</button><button class="btn grow" data-act="hc-settings">Berechtigungen</button></div>'+
+      sw('hcWrite','Trainings in Health Connect eintragen','Abgeschlossene Trainings erscheinen dann auch in anderen Fitness-Apps.')+
+      (state.settings.hcLast?'<p class="small muted" style="margin:0">Letzter Abgleich: '+agoTxt(state.settings.hcLast)+'</p>':'');
+  }else{
+    h+='<div><b>Nicht verbunden</b><small class="muted" style="display:block">Holt Schritte, Gewicht, Schlaf und Ruhepuls automatisch von deinem Handy oder deiner Uhr.</small></div><button class="btn primary" data-act="hc-connect">Mit Health Connect verbinden</button>';
+  }
+  return h+'</div></section>';
+}
+
+/* ---------- Backups: Tagesstände und Hinweis ---------- */
+const BK_DIR='GymTracker/Verlauf',BK_KEEP=14;
+async function listBackups(F){
+  const r=await F.readdir({path:BK_DIR,directory:'DOCUMENTS'});
+  return(r.files||[]).map(f=>typeof f==='string'?{name:f}:{name:f.name,size:f.size}).filter(f=>/^backup-\d{4}-\d\d-\d\d\.json$/.test(f.name)).map(f=>Object.assign(f,{day:f.name.slice(7,17)})).sort((a,b)=>a.name<b.name?1:-1);
+}
+async function pruneBackups(F){
+  const l=await listBackups(F);
+  for(const f of l.slice(BK_KEEP)){try{await F.deleteFile({path:BK_DIR+'/'+f.name,directory:'DOCUMENTS'})}catch(e){}}
+}
+async function openBackups(){
+  const F=CAP()&&CAP().Filesystem;if(!F)return;
+  ui.importData=null;ui.sheet={type:'backups',list:null};renderSheets();
+  try{const l=await listBackups(F);if(ui.sheet&&ui.sheet.type==='backups'){ui.sheet.list=l;renderSheets()}}
+  catch(e){if(ui.sheet&&ui.sheet.type==='backups'){ui.sheet.list=[];ui.sheet.err=!/exist|not found|does not/i.test(String(e&&e.message||e));renderSheets()}}
+}
+async function loadBackup(name){
+  const F=CAP()&&CAP().Filesystem;if(!F||!/^backup-[\d-]+\.json$/.test(name||''))return;
+  try{
+    const r=await F.readFile({path:BK_DIR+'/'+name,directory:'DOCUMENTS',encoding:'utf8'});
+    const j=JSON.parse(typeof r.data==='string'?r.data:'null'),st=j&&j.state?j.state:j;
+    if(!st||!Array.isArray(st.workouts)||!Array.isArray(st.exercises))throw new Error('format');
+    st.meals=st.meals||[];ui.importData=st;renderSheets();
+    const sh=document.querySelector('#sheet .sheet');if(sh)sh.scrollTop=0;
+  }catch(e){toast('Dieser Stand lässt sich nicht lesen')}
+}
+function importCard(im){
+  return im?'<div class="card" style="display:flex;flex-direction:column;gap:8px"><b>Backup gefunden</b><span class="small muted">'+im.workouts.length+' Trainings, '+im.meals.length+' Mahlzeiten, '+im.exercises.length+' Übungen. Das ersetzt alle Daten in der App.</span><button class="btn danger" data-act="import-apply" data-confirm="1">Daten ersetzen</button></div>':'';
+}
+function agoTxt(ts){
+  const d=Math.floor((Date.now()-ts)/864e5);
+  if(d<1){const h=Math.floor((Date.now()-ts)/36e5);return h<1?'gerade eben':'vor '+h+' Std.'}
+  return d===1?'gestern':'vor '+d+' Tagen';
+}
+function backupNudge(){
+  const st=state.settings,real=state.workouts.filter(w=>!w.demo);
+  if(real.length<5||(st.nudgeSnooze||0)>Date.now())return'';
+  const ref=st.lastExport||real[0].start;
+  if(Date.now()-ref<30*864e5)return'';
+  return'<section><div class="card stack"><div><b>Sichere deine Daten auch außerhalb des Handys</b><small class="muted" style="display:block">'+(st.lastExport?'Die letzte externe Sicherung ist '+agoTxt(st.lastExport)+'.':'Du hast noch nie ein Backup außerhalb der App gespeichert.')+' Wähle nach dem Tippen Google Drive oder eine andere Cloud.</small></div><div class="row"><button class="btn primary grow" data-act="export" data-k="json">Backup sichern</button><button class="btn ghost" data-act="nudge-later">Später</button></div></div></section>';
+}
+
+/* ---------- Sprache ---------- */
+const I18N={dict:null,vals:null,re:null,cache:new Map(),obs:null};
+const NUMRE=/\d+(?:[.,:]\d+)*/g,TR_ATTRS=['placeholder','aria-label','title'];
+function nmHit(n,q){n=String(n||'');return n.toLowerCase().includes(q)||(LANG==='en'&&String(tl(n)).toLowerCase().includes(q))}
+function tl(s){
+  if(LANG!=='en'||s==null||!I18N.dict)return s;
+  return trText(String(s));
+}
+function trText(s){
+  const t=s.trim();
+  if(!t||!/[A-Za-zÄÖÜäöüß]/.test(t)||I18N.vals.has(t))return s;
+  let c=I18N.cache.get(t);
+  if(c===undefined){c=trCore(t);I18N.cache.set(t,c)}
+  if(c===t)return s;
+  const lead=s.match(/^\s*/)[0],trail=s.match(/\s*$/)[0];
+  return lead+c+trail;
+}
+function trCore(t){
+  const D=I18N.dict;
+  if(D[t]!=null)return D[t];
+  const nums=[];const k=t.replace(NUMRE,m=>{nums.push(m);return'#'});
+  if(nums.length&&D[k]!=null){let i=0;return D[k].replace(/#/g,()=>nums[i++]||'')}
+  return t.replace(I18N.re,m=>D[m]!=null?D[m]:m);
+}
+function trNode(n){
+  if(n.nodeType===3){
+    const p=n.parentElement;if(!p||p.closest('script,style,textarea,[data-notr]'))return;
+    if(n.__tr===n.data)return;
+    const r=trText(n.data);if(r!==n.data)n.data=r;n.__tr=n.data;return;
+  }
+  if(n.nodeType!==1||n.closest('script,style,[data-notr]'))return;
+  trAttrs(n);n.querySelectorAll('[placeholder],[aria-label],[title]').forEach(trAttrs);
+  const w=document.createTreeWalker(n,NodeFilter.SHOW_TEXT);let x;const list=[];
+  while((x=w.nextNode()))list.push(x);
+  list.forEach(trNode);
+}
+function trAttrs(el){
+  TR_ATTRS.forEach(a=>{const v=el.getAttribute(a);if(v){const r=trText(v);if(r!==v)el.setAttribute(a,r)}});
+}
+function applyLang(){
+  const pick=state&&state.settings&&state.settings.lang;
+  LANG=pick==='de'||pick==='en'?pick:(/^de\b/i.test(navigator.language||'de')?'de':'en');
+  document.documentElement.lang=LANG;
+  if(LANG!=='en')return;
+  LOC='en-GB';
+  const D=window.GT_EN||{};I18N.dict=D;I18N.vals=new Set(Object.values(D));
+  const W=/[\p{L}\p{N}]/u,keys=Object.keys(D).filter(k=>k.length>=3&&!k.includes('#')&&!/^(Aus|Art|Ich|Von|Bis|Tag)$/.test(k)).sort((a,b)=>b.length-a.length).map(k=>(W.test(k[0])?'(?<![\\p{L}\\p{N}])':'')+k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+(W.test(k[k.length-1])?'(?![\\p{L}\\p{N}])':''));
+  I18N.re=new RegExp(keys.join('|'),'gu');
+  WD.splice(0,7,'Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+  WDF.splice(0,7,'Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+  MON.splice(0,12,'Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+  MONF.splice(0,12,'January','February','March','April','May','June','July','August','September','October','November','December');
+  trNode(document.body);
+  I18N.obs=new MutationObserver(ms=>{ms.forEach(m=>{
+    if(m.type==='childList')m.addedNodes.forEach(trNode);
+    else if(m.type==='characterData')trNode(m.target);
+    else if(m.type==='attributes')trAttrs(m.target);
+  })});
+  I18N.obs.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:TR_ATTRS});
+}
 /* ---------- Start ---------- */
 (async function init(){
   setSync('local');
   await loadAll();
+  applyLang();
   ui.loading=false;
   applyTheme();
   try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
@@ -2872,6 +3099,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&state&&st
   if(LN()&&(state.remind.on||REM.some(q=>((state.remind.extra||{})[q[0]]||{}).on)))scheduleReminders();
   route();
   if(ui.restored)toast('Daten aus dem Auto-Backup wiederhergestellt');
+  if(GN())hcRefresh().then(()=>{renderSheets();hcSync({})});
 })();
 })();
 </script>
